@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en-us">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,7 +19,7 @@
 			window.onload = function() {
 				var vids_elem = document.getElementById("vids");
 
-				//NOTE: Check if we're running in Firefox, IE or Edge
+				// NOTE: Check if we're running in Firefox, IE or Edge
 				var no_webkit_scrollbar = (typeof InstallTrigger !== 'undefined' || !!document.documentMode || !!window.StyleMedia);
 				if(no_webkit_scrollbar) {
 					var html_elem = document.documentElement;
@@ -39,26 +39,35 @@
 					vids_elem.style.overflow = "auto";
 				}
 
-				var vids = vids_elem.children;
-				for(var i = 0; i < vids.length; i++) {
-					var vid = vids[i];
+				var vid_count = 6;
+				for(var i = 0; i < vid_count; i++) {
+					var vid = document.createElement("video");
+					vid.src = "gif/vid" + i + ".mp4";
+					vid.poster = "gif/vid" + i + ".jpg";
+					vid.loop = true;
+					vid.muted = true;
+
+					vids_elem.appendChild(vid);
+
 					vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
 					vid.onwaiting = function() { if(!isNaN(this.duration)) { this.currentTime = 0; } };
 					vid.onclick = force_vid_play;
 					vid.play();
 				}
+
+				// var vids = vids_elem.children;
+				// for(var i = 0; i < vids.length; i++) {
+				// 	var vid = vids[i];
+				// 	vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
+				// 	vid.onwaiting = function() { if(!isNaN(this.duration)) { this.currentTime = 0; } };
+				// 	vid.onclick = force_vid_play;
+				// 	vid.play();
+				// }
 			}
 		</script>
 	</head>
 
 	<body style="background-color: #000000; padding: 0; margin: 0;">
-		<div id="vids" style="font-size: 0;">
-			<video src="gif/vid0.mp4" poster="gif/vid0.jpg" loop muted></video>
-			<video src="gif/vid1.mp4" poster="gif/vid1.jpg" loop muted></video>
-			<video src="gif/vid2.mp4" poster="gif/vid2.jpg" loop muted></video>
-			<video src="gif/vid3.mp4" poster="gif/vid3.jpg" loop muted></video>
-			<video src="gif/vid4.mp4" poster="gif/vid4.jpg" loop muted></video>
-			<video src="gif/vid5.mp4" poster="gif/vid5.jpg" loop muted></video>
-		</div>
+		<div id="vids" style="font-size: 0;"></div>
 	</body>
 </html>
