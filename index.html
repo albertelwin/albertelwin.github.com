@@ -9,13 +9,21 @@
 			::-webkit-scrollbar { display: none; width: 0 !important; }
 		</style>
 		<script>
+			function force_vid_play() {
+				var vids = document.getElementById("vids").children;
+				for(var i = 0; i < vids.length; i++) {
+					vids[i].play();
+				}
+			}
+
 			window.onload = function() {
 				var vids = document.getElementById("vids").children;
 				for(var i = 0; i < vids.length; i++) {
 					var vid = vids[i];
 					vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
 					vid.onwaiting = function() { this.currentTime = 0; };
-					vid.load();
+					vid.onclick = force_vid_play;
+					vid.play();
 				}
 			}
 		</script>
