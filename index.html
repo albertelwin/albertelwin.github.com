@@ -38,9 +38,6 @@
 					vids_elem.style.paddingBottom = (scrollbar_height <= 0 ? 17 : scrollbar_height) + "px";
 					vids_elem.style.overflow = "auto";
 				}
-				else {
-					document.body.style.overflow = "";
-				}
 
 				var vids = vids_elem.children;
 				for(var i = 0; i < vids.length; i++) {
@@ -54,7 +51,7 @@
 		</script>
 	</head>
 
-	<body style="background-color: #000000; padding: 0; margin: 0; overflow: hidden;">
+	<body style="background-color: #000000; padding: 0; margin: 0;">
 		<div id="vids" style="font-size: 0;">
 			<video src="gif/vid0.mp4" poster="gif/vid0.jpg" loop muted></video>
 			<video src="gif/vid1.mp4" poster="gif/vid1.jpg" loop muted></video>
