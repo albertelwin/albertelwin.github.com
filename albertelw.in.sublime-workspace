@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"body",
+				"body_on_load"
+			],
+			[
+				"pad",
+				"padding_x"
+			],
+			[
+				"padd",
+				"padding_x"
+			],
+			[
+				"no",
+				"no_webkit_scrollbar"
+			],
+			[
+				"vids",
+				"vids_elem"
+			],
+			[
+				"bo",
+				"body_elem"
+			],
+			[
+				"html",
+				"html_elem"
+			],
+			[
+				"is_",
+				"is_edge"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
 				"vid",
 				"vid_index"
 			],
@@ -66,10 +102,6 @@
 			[
 				"img",
 				"img_count"
-			],
-			[
-				"over",
-				"overlay=shortest=1"
 			],
 			[
 				"set",
@@ -482,38 +514,6 @@
 			[
 				"CLF",
 				"CFL_bulb"
-			],
-			[
-				"CFL",
-				"CFL_bulb"
-			],
-			[
-				"enemi",
-				"enemies_off_screen"
-			],
-			[
-				"ene",
-				"enemy"
-			],
-			[
-				"enem",
-				"enemy"
-			],
-			[
-				"zoom",
-				"zoom_x"
-			],
-			[
-				"qu",
-				"queries"
-			],
-			[
-				"stack",
-				"stack_count"
-			],
-			[
-				"DEBUG",
-				"DEBUG_NULL_INDEX"
 			]
 		]
 	},
@@ -523,15 +523,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1164,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "__gif/build.bat",
-			"settings":
-			{
-				"buffer_size": 250,
+				"buffer_size": 2905,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -540,8 +532,18 @@
 			"file": "albertelw.in.sublime-project",
 			"settings":
 			{
-				"buffer_size": 251,
+				"buffer_size": 558,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "__gif/main.cpp",
+			"settings":
+			{
+				"buffer_size": 1874,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -759,8 +761,12 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
+		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
+		"/C/Users/Albert/Downloads/budget.txt",
 		"/C/Users/Albert/albertelw.in/.gitignore",
+		"/C/Users/Albert/albertelw.in/__gif/build.bat",
+		"/C/Users/Albert/albertelw.in/__gif/sys.hpp",
+		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
 		"/C/Users/Albert/Gif/build.bat",
 		"/C/Users/Albert/Gif/main.cpp",
 		"/C/Fraps/Movies/avi_to_gif.bat",
@@ -794,7 +800,6 @@
 		"/C/Users/Albert/Blog/CNAME",
 		"/C/Users/Albert/Blog/_config.yml",
 		"/C/Users/Albert/Garden/Assets/Scripts/Player.cs",
-		"/C/Users/Albert/Downloads/budget.txt",
 		"/C/Users/Albert/Downloads/01462864_20161126_1232.csv",
 		"/C/Users/Albert/Blog/locate/index.html",
 		"/C/Users/Albert/Blog/gif/src/vid/vid.bat",
@@ -883,10 +888,7 @@
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/3c0ac9c8f7b75324f901c1dc2638240b.resource",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Managed/Metadata/global-metadata.dat",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Resources/unity_builtin_extra",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/0b7af2daa40f54321a59bb4b34663117.resource",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/AndroidManifest.xml",
-		"/C/Users/Albert/GFX/src/stb_truetype.h",
-		"/C/Users/Albert/Downloads/003/readme.txt"
+		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/0b7af2daa40f54321a59bb4b34663117.resource"
 	],
 	"find":
 	{
@@ -905,6 +907,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"loop",
+			"playsinline",
+			"></video>",
+			"}\n",
+			"1WZKMAPIyK0",
+			"_-D2yG_NLRc",
+			"N1YyaXrQYls",
+			"0",
+			"preload=\"none\"",
+			"></video>",
+			"default_padding",
+			"padding_y",
+			"padding_x",
+			"padding",
+			"(vids_elem",
+			"(vids_elem.of",
+			"vids_elem",
+			"(vids_elem",
+			"firefox_ie_or_edge",
+			"firefox_or_ie",
+			"no_webkit_scrollbar",
+			"webkit_scrollbar_not_supported",
+			"100px",
+			"15px",
+			"vids",
+			"2",
 			"img_count",
 			"vid_height",
 			"src=",
@@ -1006,33 +1034,7 @@
 			"y",
 			"f",
 			"%",
-			"string",
-			"__PRINT_PREFIX",
-			"\"LOG: \"",
-			"ty",
-			"tx",
-			"Vec3",
-			"\\n\", val);",
-			"printf(\" %",
-			"LOG:",
-			"normalize(",
-			"= ",
-			"normalize(",
-			"+",
-			"len_sqr",
-			"Vec2",
-			" * 2.0",
-			"y.",
-			"x.",
-			"cross",
-			"y",
-			"rgb;",
-			"viewport_",
-			"gfx_state->height_map.",
-			"gfx_state->main_buf",
-			"(u32)",
-			"arena",
-			"u32"
+			"string"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1050,7 +1052,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1059,15 +1061,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1164,
+						"buffer_size": 2905,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								297,
+								297
 							]
 						],
 						"settings":
@@ -1079,52 +1081,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "__gif/build.bat",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 250,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "albertelw.in.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 251,
+						"buffer_size": 558,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								343,
+								343
 							]
 						],
 						"settings":
@@ -1136,7 +1110,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "__gif/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 13.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1181,7 +1184,7 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "GFX",
+	"pinned_build_system": "albertelw.in",
 	"project": "albertelw.in.sublime-project",
 	"replace":
 	{
@@ -1196,19 +1199,31 @@
 		[
 			[
 				"",
-				"__gif\\build.bat"
+				"gif_yt\\index.html"
+			],
+			[
+				"index",
+				"gif_yt\\index.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"ig",
+				".gitignore"
 			],
 			[
 				"bu",
-				"C:\\Users\\Albert\\Gif\\build.bat"
-			],
-			[
-				"main",
-				"src\\main.cpp"
+				"__gif\\build.bat"
 			],
 			[
 				"sys",
-				"src\\sys.hpp"
+				"__gif\\sys.hpp"
+			],
+			[
+				"main",
+				"__gif\\main.cpp"
 			],
 			[
 				"oinde",
@@ -1325,10 +1340,6 @@
 			[
 				"gf",
 				"src\\gfx.cpp"
-			],
-			[
-				"inde",
-				"C:\\Users\\Albert\\Map\\index.html"
 			],
 			[
 				"sh",
@@ -1697,14 +1708,6 @@
 			[
 				"asm",
 				"src\\asm_js_main.cpp"
-			],
-			[
-				"template",
-				"src\\template.html"
-			],
-			[
-				"tmeplate",
-				"src\\template.html"
 			]
 		],
 		"width": 0.0
