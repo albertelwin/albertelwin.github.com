@@ -20,29 +20,7 @@
 			}
 
 			window.onload = function() {
-				var vids_elem = document.getElementById("vids");
-
-				// NOTE: Check if we're running in Firefox, IE or Edge
-				// var no_webkit_scrollbar = (typeof InstallTrigger !== 'undefined' || !!document.documentMode || !!window.StyleMedia);
-				// if(no_webkit_scrollbar) {
-				// 	var html_elem = document.documentElement;
-				// 	html_elem.style.width = html_elem.style.height = "100%";
-				// 	html_elem.style.overflow = "hidden";
-
-				// 	var body_elem = document.body;
-				// 	body_elem.style.width = body_elem.style.height = "100%";
-				// 	body_elem.style.overflow = "hidden";
-
-				// 	var scrollbar_width = vids_elem.offsetWidth - vids_elem.clientWidth;
-				// 	var scrollbar_height = vids_elem.offsetHeight - vids_elem.clientHeight;
-
-				// 	vids_elem.style.width = vids_elem.style.height = "100%";
-				// 	vids_elem.style.paddingRight = (scrollbar_width <= 0 ? 17 : scrollbar_width) + "px";
-				// 	vids_elem.style.paddingBottom = (scrollbar_height <= 0 ? 17 : scrollbar_height) + "px";
-				// 	vids_elem.style.overflow = "auto";
-				// }
-
-				var vids = vids_elem.children;
+				var vids = document.getElementById("vids").children;
 				for(var i = 0; i < vids.length; i++) {
 					var vid = vids[i];
 					vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
