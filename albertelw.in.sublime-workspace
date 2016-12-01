@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"img_",
+				"img_height"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
 				"body",
 				"body_on_load"
 			],
@@ -106,10 +114,6 @@
 			[
 				"set",
 				"setpts=PTS-STARTPTS"
-			],
-			[
-				"img_",
-				"img_width"
 			],
 			[
 				"ZERO",
@@ -510,24 +514,11 @@
 			[
 				"bulb",
 				"bulb_sym"
-			],
-			[
-				"CLF",
-				"CFL_bulb"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2905,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
 		{
 			"file": "albertelw.in.sublime-project",
 			"settings":
@@ -538,10 +529,28 @@
 			}
 		},
 		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2004,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "__gif/main.cpp",
 			"settings":
 			{
-				"buffer_size": 1874,
+				"buffer_size": 1958,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "profile/index.html",
+			"settings":
+			{
+				"buffer_size": 449,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -761,6 +770,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/__gif/content/avi_to_gif.bat",
+		"/C/Users/Albert/albertelw.in/index.html",
 		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
 		"/C/Users/Albert/Downloads/budget.txt",
 		"/C/Users/Albert/albertelw.in/.gitignore",
@@ -792,7 +803,6 @@
 		"/C/Users/Albert/GFX/src/asset.cpp",
 		"/C/Users/Albert/GFX/src/triangulate.cpp",
 		"/C/Users/Albert/GFX/bin/blur_y.gl_asm",
-		"/C/Users/Albert/albertelw.in/index.html",
 		"/C/Users/Albert/albertelw.in__/.gitignore",
 		"/C/Users/Albert/Blog/index.html",
 		"/C/Users/Albert/Blog/gif/index.html",
@@ -887,8 +897,7 @@
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/03ccf4d9ab43db045a53007b816834f6",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/3c0ac9c8f7b75324f901c1dc2638240b.resource",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Managed/Metadata/global-metadata.dat",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Resources/unity_builtin_extra",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/0b7af2daa40f54321a59bb4b34663117.resource"
+		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Resources/unity_builtin_extra"
 	],
 	"find":
 	{
@@ -907,6 +916,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"autoplay",
 			"loop",
 			"playsinline",
 			"></video>",
@@ -1033,8 +1043,7 @@
 			"include <demo",
 			"y",
 			"f",
-			"%",
-			"string"
+			"%"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1052,40 +1061,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2905,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "albertelw.in.sublime-project",
 					"semi_transient": false,
 					"settings":
@@ -1110,6 +1090,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
 					"type": "text"
 				},
@@ -1119,15 +1128,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1874,
+						"buffer_size": 1958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1666,
-								1666
+								142,
+								142
 							]
 						],
 						"settings":
@@ -1136,10 +1145,38 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "profile/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1198,12 +1235,12 @@
 		"selected_items":
 		[
 			[
-				"",
-				"gif_yt\\index.html"
+				"index",
+				"profile\\index.html"
 			],
 			[
-				"index",
-				"gif_yt\\index.html"
+				"",
+				"__gif\\main.cpp"
 			],
 			[
 				"inde",
@@ -1715,9 +1752,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "gfx",
+		"last_filter": "dol",
 		"selected_items":
 		[
+			[
+				"dol",
+				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
+			],
 			[
 				"gfx",
 				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
@@ -1753,10 +1794,6 @@
 			[
 				"stero",
 				"C:\\Users\\Albert\\Downloads\\tv_repo\\repo\\stereo.sublime-project"
-			],
-			[
-				"dol",
-				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
 			],
 			[
 				"doly",
