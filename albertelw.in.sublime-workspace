@@ -545,15 +545,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "profile/index.html",
-			"settings":
-			{
-				"buffer_size": 449,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "",
@@ -770,6 +761,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/profile/index.html",
 		"/C/Users/Albert/albertelw.in/__gif/content/avi_to_gif.bat",
 		"/C/Users/Albert/albertelw.in/index.html",
 		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
@@ -896,8 +888,7 @@
 		"/C/Users/Albert/Authority/email.txt",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/03ccf4d9ab43db045a53007b816834f6",
 		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/3c0ac9c8f7b75324f901c1dc2638240b.resource",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Managed/Metadata/global-metadata.dat",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Resources/unity_builtin_extra"
+		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/Managed/Metadata/global-metadata.dat"
 	],
 	"find":
 	{
@@ -1061,7 +1052,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1090,7 +1081,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1135,42 +1126,14 @@
 						"selection":
 						[
 							[
-								142,
-								142
+								693,
+								693
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "profile/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1752,9 +1715,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "dol",
+		"last_filter": "doly",
 		"selected_items":
 		[
+			[
+				"doly",
+				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
+			],
 			[
 				"dol",
 				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
@@ -1794,10 +1761,6 @@
 			[
 				"stero",
 				"C:\\Users\\Albert\\Downloads\\tv_repo\\repo\\stereo.sublime-project"
-			],
-			[
-				"doly",
-				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
 			],
 			[
 				"nova",
