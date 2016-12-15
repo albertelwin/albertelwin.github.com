@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"record",
+				"record_food"
+			],
+			[
 				"kcal",
 				"kcal_target"
 			],
@@ -14,10 +18,6 @@
 			[
 				"good",
 				"good_color"
-			],
-			[
-				"record",
-				"record_custom"
 			],
 			[
 				"reco",
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 7216,
+				"buffer_size": 7198,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -907,6 +907,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".0",
 			"\"apple_pie\", 600.0);",
 			"600.0",
 			", false",
@@ -1033,8 +1034,7 @@
 			"dead",
 			"deleted",
 			"it->prev",
-			"&gfx_state->arena",
-			"it"
+			"&gfx_state->arena"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1097,8 +1097,8 @@
 						"selection":
 						[
 							[
-								167,
-								547
+								166,
+								166
 							]
 						],
 						"settings":
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7216,
+						"buffer_size": 7198,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								240,
-								240
+								840,
+								840
 							]
 						],
 						"settings":
