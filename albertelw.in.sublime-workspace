@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"inner",
+				"innerHeight"
+			],
+			[
+				"re",
+				"request_animation_frame"
+			],
+			[
+				"request",
+				"requestAnimationFrame"
+			],
+			[
+				"reques",
+				"request_animation_frame"
+			],
+			[
 				"record",
-				"record_food"
+				"record_custom"
 			],
 			[
 				"kcal",
@@ -498,22 +514,6 @@
 			[
 				"HTBOT",
 				"HTBOTTOMLEFT"
-			],
-			[
-				"HTTOP",
-				"HTTOPLEFT"
-			],
-			[
-				"HTBOTT",
-				"HTBOTTOMRIGHT"
-			],
-			[
-				"HTRIGHT",
-				"HTTOPRIGHT"
-			],
-			[
-				"bakc_b",
-				"back_buffer_height"
 			]
 		]
 	},
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 7198,
+				"buffer_size": 7911,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -907,6 +907,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"needs_update",
+			"request_animation_frame",
 			".0",
 			"\"apple_pie\", 600.0);",
 			"600.0",
@@ -1032,9 +1034,7 @@
 			"demo->point_count",
 			"ALLOC",
 			"dead",
-			"deleted",
-			"it->prev",
-			"&gfx_state->arena"
+			"deleted"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7198,
+						"buffer_size": 7911,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								840,
-								840
+								1809,
+								1809
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2588.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
