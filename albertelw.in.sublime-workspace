@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"record",
+				"record_food"
+			],
+			[
+				"kcal",
+				"kcal_balance"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"recor",
+				"record_food"
+			],
+			[
 				"inner",
 				"innerHeight"
 			],
@@ -18,14 +34,6 @@
 			[
 				"reques",
 				"request_animation_frame"
-			],
-			[
-				"record",
-				"record_custom"
-			],
-			[
-				"kcal",
-				"kcal_target"
 			],
 			[
 				"r_",
@@ -506,14 +514,6 @@
 			[
 				"back_b",
 				"back_buffer_width"
-			],
-			[
-				"HTBOTTOM",
-				"HTBOTTOMLEFT"
-			],
-			[
-				"HTBOT",
-				"HTBOTTOMLEFT"
 			]
 		]
 	},
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 7911,
+				"buffer_size": 8688,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -907,6 +907,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			", 0.0);",
+			"0",
+			"record_custom(diary, \"apple_pie\"",
+			"dt",
+			"r_range",
 			"needs_update",
 			"request_animation_frame",
 			".0",
@@ -1029,12 +1034,7 @@
 			"time",
 			"GfxKey_return",
 			"GfxKey_",
-			"return",
-			"point_count",
-			"demo->point_count",
-			"ALLOC",
-			"dead",
-			"deleted"
+			"return"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7911,
+						"buffer_size": 8688,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1809,
-								1809
+								6189,
+								6189
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2588.0,
+						"translation.y": 2379.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1715,15 +1715,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "do",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"do",
+				"",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
-				"dol",
+				"alber",
+				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
+			],
+			[
+				"do",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
@@ -1731,8 +1735,8 @@
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
-				"",
-				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+				"dol",
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
 				"g",

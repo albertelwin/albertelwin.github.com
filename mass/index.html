@@ -1,4 +1,16 @@
 
+<!-- TODO ✓
+
+DOING:
+
+TODO:
+	Graph weight
+	Basis matrix
+	Text rendering
+
+DONE:
+
+ -->
 <!doctype html>
 <html lang="en">
 	<head>
@@ -25,7 +37,10 @@
 			}
 
 			function begin_day(diary, weight) {
-				diary[diary.length] = { items: [], kcal: 0.0, weight: weight, };
+				var day = diary[diary.length] = { items: [], kcal: 0.0, weight: -1.0, };
+				if(weight) {
+					day.weight = weight;
+				}
 			}
 
 			function record_custom(diary, name, kcal, good) {
@@ -75,8 +90,7 @@
 					var program = APP.program;
 					var v_buf = APP.v_buf;
 
-					// var dirty = false;
-					var dirty = true;
+					var dirty = false;
 
 					if(gl_canvas.width !== window.innerWidth || gl_canvas.height != window.innerHeight) {
 						gl_canvas.width = window.innerWidth;
@@ -101,7 +115,6 @@
 						var pad = 0.01;
 						var r_range = 1.0 / APP.max_kcal;
 
-						//TODO: Fix this!!
 						for(var day_index = 0; day_index < diary.length; day_index++) {
 							var day = diary[day_index];
 
@@ -150,50 +163,57 @@
 				push_food(foods, "egg_roll", 350, true);
 				push_food(foods, "crisps", 500);
 				push_food(foods, "stroopwaffel", 180);
+				push_food(foods, "apple_pie", 550);
 				push_food(foods, "samosa", 227, true);
 				push_food(foods, "baxter_lentil", 172, true);
 
 				var diary = APP.diary = [];
 
-				begin_day(diary, 80.0);
+				begin_day(diary, 79.37866);
 				record_food(diary, foods.egg_roll);
 				record_food(diary, foods.bread, 6);
 				record_food(diary, foods.ramen);
 				record_custom(diary, "chips", 500);
 
-				begin_day(diary, 0.0);
+				begin_day(diary);
 				record_food(diary, foods.crisps, 0.5);
 				record_custom(diary, "poached_eggs_on_toast", 800, true);
 				record_food(diary, foods.egg_roll, 2);
 				record_custom(diary, "hot_dog_and_onion_rings", 800);
 				record_food(diary, foods.stroopwaffel, 5);
-				record_custom(diary, "apple_pie", 550);
+				record_food(diary, foods.apple_pie);
 
-				begin_day(diary, 0.0);
+				begin_day(diary);
 				record_custom(diary, "mozzarella_and_pesto_sandwich", 800, true);
 				record_custom(diary, "egg_and_cheese_on_bread", 400, true);
+				record_food(diary, foods.apple_pie);
 				record_custom(diary, "veggie_burger", 600, true);
 				record_custom(diary, "chocolate_waffle", 500);
 
-				begin_day(diary, 0.0);
+				begin_day(diary);
 				record_custom(diary, "apple_crumble_pancakes", 800);
-				record_custom(diary, "pesto_pasta", 600);
+				record_custom(diary, "pesto_pasta", 600, true);
 				record_food(diary, foods.stroopwaffel, 6);
 
-				begin_day(diary, 0.0);
+				begin_day(diary);
 				record_food(diary, foods.stroopwaffel, 2);
 				record_custom(diary, "fried_egg_croissant", 500, true);
 				record_custom(diary, "apple_donut", 450);
 				record_custom(diary, "mini_stroopwaffles", 700);
 				record_custom(diary, "pizza", 800, true);
-				record_custom(diary, "apple_pie", 550);
+				record_food(diary, foods.apple_pie);
 
-				begin_day(diary, 0.0);
+				begin_day(diary);
 				record_food(diary, foods.samosa, 2);
 				record_custom(diary, "tomato_soup", 200.0, true);
 				record_custom(diary, "sweet", 100.0);
 				record_food(diary, foods.crisps);
 				record_food(diary, foods.baxter_lentil);
+
+				begin_day(diary, 77.47358);
+				record_food(diary, foods.crisps);
+				record_custom(diary, "lentil_soup", 200.0, true);
+				record_custom(diary, "bread", 300.0, true);
 
 				var kcal_balance = 0.0;
 
@@ -206,7 +226,7 @@
 					var budget = APP.kcal_target - day.kcal;
 					kcal_balance += budget;
 
-					console.log(day.kcal + " (" + budget + ")");
+					console.log(day.kcal + " (" + budget + "), " + day.weight + "kg");
 				}
 
 				console.log(kcal_balance);
