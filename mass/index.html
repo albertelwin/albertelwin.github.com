@@ -36,8 +36,8 @@ DONE:
 				foods[name] = food;
 			}
 
-			function begin_day(diary, weight) {
-				var day = diary[diary.length] = { items: [], kcal: 0.0, weight: -1.0, };
+			function begin_day(diary, date, weight) {
+				var day = diary[diary.length] = { items: [], kcal: 0.0, date: date, weight: 0.0, };
 				if(weight) {
 					day.weight = weight;
 				}
@@ -92,9 +92,12 @@ DONE:
 
 					var dirty = false;
 
-					if(gl_canvas.width !== window.innerWidth || gl_canvas.height != window.innerHeight) {
-						gl_canvas.width = window.innerWidth;
-						gl_canvas.height = window.innerHeight;
+					var canvas_width = window.innerWidth;
+					var canvas_height = window.innerHeight * 0.5;
+
+					if(gl_canvas.width !== canvas_width || gl_canvas.height != canvas_height) {
+						gl_canvas.width = canvas_width;
+						gl_canvas.height = canvas_height;
 
 						dirty = true;
 					}
@@ -158,24 +161,25 @@ DONE:
 				var foods = {};
 				push_food(foods, "apple", 50, true);
 				push_food(foods, "bread", 100, true);
-				push_food(foods, "ramen", 400);
-				push_food(foods, "fried_egg", 150, true);
 				push_food(foods, "egg_roll", 350, true);
 				push_food(foods, "crisps", 500);
 				push_food(foods, "stroopwaffel", 180);
 				push_food(foods, "apple_pie", 550);
 				push_food(foods, "samosa", 227, true);
+				push_food(foods, "baxter_country", 145, true);
 				push_food(foods, "baxter_lentil", 172, true);
+				push_food(foods, "porridge", 92, true);
+				push_food(foods, "oatcake", 46, true);
 
 				var diary = APP.diary = [];
 
-				begin_day(diary, 79.37866);
+				begin_day(diary, "11/12/16", 79.37866);
 				record_food(diary, foods.egg_roll);
 				record_food(diary, foods.bread, 6);
-				record_food(diary, foods.ramen);
+				record_custom(diary, "ramen", 400);
 				record_custom(diary, "chips", 500);
 
-				begin_day(diary);
+				begin_day(diary, "12/12/16");
 				record_food(diary, foods.crisps, 0.5);
 				record_custom(diary, "poached_eggs_on_toast", 800, true);
 				record_food(diary, foods.egg_roll, 2);
@@ -183,19 +187,19 @@ DONE:
 				record_food(diary, foods.stroopwaffel, 5);
 				record_food(diary, foods.apple_pie);
 
-				begin_day(diary);
+				begin_day(diary, "13/12/16");
 				record_custom(diary, "mozzarella_and_pesto_sandwich", 800, true);
 				record_custom(diary, "egg_and_cheese_on_bread", 400, true);
 				record_food(diary, foods.apple_pie);
 				record_custom(diary, "veggie_burger", 600, true);
 				record_custom(diary, "chocolate_waffle", 500);
 
-				begin_day(diary);
+				begin_day(diary, "14/12/16");
 				record_custom(diary, "apple_crumble_pancakes", 800);
 				record_custom(diary, "pesto_pasta", 600, true);
 				record_food(diary, foods.stroopwaffel, 6);
 
-				begin_day(diary);
+				begin_day(diary, "15/12/16");
 				record_food(diary, foods.stroopwaffel, 2);
 				record_custom(diary, "fried_egg_croissant", 500, true);
 				record_custom(diary, "apple_donut", 450);
@@ -203,19 +207,26 @@ DONE:
 				record_custom(diary, "pizza", 800, true);
 				record_food(diary, foods.apple_pie);
 
-				begin_day(diary);
+				begin_day(diary, "16/12/16");
 				record_food(diary, foods.samosa, 2);
-				record_custom(diary, "tomato_soup", 200.0, true);
-				record_custom(diary, "sweet", 100.0);
+				record_custom(diary, "tomato_soup", 200, true);
+				record_custom(diary, "sweet", 100);
 				record_food(diary, foods.crisps);
 				record_food(diary, foods.baxter_lentil);
 
-				begin_day(diary, 77.47358);
+				begin_day(diary, "17/12/16", 77.47358);
 				record_food(diary, foods.crisps);
-				record_custom(diary, "lentil_soup", 200.0, true);
-				record_custom(diary, "bread", 300.0, true);
+				record_custom(diary, "lentil_soup", 200, true);
+				record_custom(diary, "bread", 300, true);
+				record_custom(diary, "nandos_veggie_burger", 463, true);
 
 				var kcal_balance = 0.0;
+				var kcal_streak = 0;
+
+				var text_box = document.getElementById("text_box");
+				text_box.innerHTML = "";
+
+				var detail_html = "";
 
 				for(var day_index = 0; day_index < diary.length; day_index++) {
 					var day = diary[day_index];
@@ -226,10 +237,22 @@ DONE:
 					var budget = APP.kcal_target - day.kcal;
 					kcal_balance += budget;
 
-					console.log(day.kcal + " (" + budget + "), " + day.weight + "kg");
+					if(budget >= 0.0) {
+						kcal_streak++;
+					}
+					else {
+						kcal_streak = 0;
+					}
+
+					var kg_fixed = day.weight.toFixed(1);
+					var kg_str = kg_fixed < 10 ? "0" + kg_fixed : kg_fixed;
+
+					detail_html = "&nbsp;" + day.date + " <b>·</b> " + kg_str + "kg <b>·</b> " + day.kcal + " (" + budget + ")<br>" + detail_html;
 				}
 
-				console.log(kcal_balance);
+				text_box.innerHTML += "&nbsp;Balance: " + kcal_balance + "<br>";
+				text_box.innerHTML += "&nbsp;&nbsp;Streak: " + kcal_streak + "<br><br>";
+				text_box.innerHTML += detail_html;
 
 				var gl_canvas = APP.gl_canvas = document.getElementById("gl_canvas");
 
@@ -296,5 +319,6 @@ DONE:
 
 	<body style="background-color: #000000; padding: 0; margin: 0;">
 		<canvas id="gl_canvas" width="0" height="0" style="padding: 0; margin: 0;"></canvas>
+		<div id="text_box" style="font-family: Courier New, monospace; font-size: 10pt; color: #FFFFFF"></div>
 	</body>
 </html>

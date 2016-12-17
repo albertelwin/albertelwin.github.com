@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"record",
-				"record_food"
+				"kcal",
+				"kcal_streak"
 			],
 			[
-				"kcal",
-				"kcal_balance"
+				"record",
+				"record_food"
 			],
 			[
 				"time",
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 8688,
+				"buffer_size": 8883,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8688,
+						"buffer_size": 8883,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6189,
-								6189
+								6689,
+								6689
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2379.0,
+						"translation.y": 2392.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
