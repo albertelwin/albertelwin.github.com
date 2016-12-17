@@ -174,9 +174,17 @@ DONE:
 							if(day.weight > 0.0) {
 								var w = day.weight * r_kg_range + kg_offset;
 
+								var y = -1.0 + w * 2.0;;
+
+								if(lines_buf.count == 0) {
+									lines_dat[0] = -1.0;
+									lines_dat[1] = y;
+									lines_buf.count++;
+								}
+
 								var i2 = lines_buf.count * 2;
 								lines_dat[i2 + 0] = -1.0 + (width * 2.0 + pad * r_aspect * 3.0) * (i + 0.5);
-								lines_dat[i2 + 1] = -1.0 + w * 2.0;
+								lines_dat[i2 + 1] = y;
 
 								lines_buf.count++;
 							}
@@ -362,7 +370,7 @@ DONE:
 					GL.bindBuffer(GL.ARRAY_BUFFER, v_buf.id);
 					GL.bufferData(GL.ARRAY_BUFFER, v_dat, GL.STATIC_DRAW);
 
-					var lines_dat = APP.lines_dat = new Float32Array(diary.days.length * 2);
+					var lines_dat = APP.lines_dat = new Float32Array((diary.days.length + 1) * 2);
 
 					var lines_buf = APP.lines_buf = { id: null, count: 0, };
 					lines_buf.id = GL.createBuffer();
