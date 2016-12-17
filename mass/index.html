@@ -36,15 +36,20 @@ DONE:
 				foods[name] = food;
 			}
 
-			function begin_day(diary, date, weight) {
-				var day = diary[diary.length] = { items: [], kcal: 0.0, date: date, weight: 0.0, };
+			function begin_day(diary, weight) {
+				var index = diary.days.length;
+
+				var date = new Date(diary.date.valueOf());
+				date.setDate(date.getDate() + index);
+
+				var day = diary.days[index] = { items: [], kcal: 0.0, date: date, weight: 0.0, };
 				if(weight) {
 					day.weight = weight;
 				}
 			}
 
 			function record_custom(diary, name, kcal, good) {
-				var day = diary[diary.length - 1];
+				var day = diary.days[diary.days.length - 1];
 
 				var item = { name: name, kcal: kcal, good: false, };
 				if(good === true) {
@@ -118,8 +123,8 @@ DONE:
 						var pad = 0.01;
 						var r_range = 1.0 / APP.max_kcal;
 
-						for(var day_index = 0; day_index < diary.length; day_index++) {
-							var day = diary[day_index];
+						for(var day_index = 0; day_index < diary.days.length; day_index++) {
+							var day = diary.days[day_index];
 
 							var x = -1.0 + (width * 2.0 + pad * r_aspect * 3.0) * (day_index + 0.5);
 							var y = -1.0;
@@ -171,15 +176,15 @@ DONE:
 				push_food(foods, "porridge", 92, true);
 				push_food(foods, "oatcake", 46, true);
 
-				var diary = APP.diary = [];
+				var diary = APP.diary = { days: [], date: new Date(2016, 11, 9), };
 
-				begin_day(diary, "11/12/16", 79.37866);
+				begin_day(diary, 79.37866);
 				record_food(diary, foods.egg_roll);
 				record_food(diary, foods.bread, 6);
 				record_custom(diary, "ramen", 400);
 				record_custom(diary, "chips", 500);
 
-				begin_day(diary, "12/12/16");
+				begin_day(diary);
 				record_food(diary, foods.crisps, 0.5);
 				record_custom(diary, "poached_eggs_on_toast", 800, true);
 				record_food(diary, foods.egg_roll, 2);
@@ -187,19 +192,19 @@ DONE:
 				record_food(diary, foods.stroopwaffel, 5);
 				record_food(diary, foods.apple_pie);
 
-				begin_day(diary, "13/12/16");
+				begin_day(diary);
 				record_custom(diary, "mozzarella_and_pesto_sandwich", 800, true);
 				record_custom(diary, "egg_and_cheese_on_bread", 400, true);
 				record_food(diary, foods.apple_pie);
 				record_custom(diary, "veggie_burger", 600, true);
 				record_custom(diary, "chocolate_waffle", 500);
 
-				begin_day(diary, "14/12/16");
+				begin_day(diary);
 				record_custom(diary, "apple_crumble_pancakes", 800);
 				record_custom(diary, "pesto_pasta", 600, true);
 				record_food(diary, foods.stroopwaffel, 6);
 
-				begin_day(diary, "15/12/16");
+				begin_day(diary);
 				record_food(diary, foods.stroopwaffel, 2);
 				record_custom(diary, "fried_egg_croissant", 500, true);
 				record_custom(diary, "apple_donut", 450);
@@ -207,14 +212,14 @@ DONE:
 				record_custom(diary, "pizza", 800, true);
 				record_food(diary, foods.apple_pie);
 
-				begin_day(diary, "16/12/16");
+				begin_day(diary);
 				record_food(diary, foods.samosa, 2);
 				record_custom(diary, "tomato_soup", 200, true);
 				record_custom(diary, "sweet", 100);
 				record_food(diary, foods.crisps);
 				record_food(diary, foods.baxter_lentil);
 
-				begin_day(diary, "17/12/16", 77.47358);
+				begin_day(diary, 77.47358);
 				record_food(diary, foods.crisps);
 				record_custom(diary, "lentil_soup", 200, true);
 				record_custom(diary, "bread", 300, true);
@@ -228,8 +233,8 @@ DONE:
 
 				var detail_html = "";
 
-				for(var day_index = 0; day_index < diary.length; day_index++) {
-					var day = diary[day_index];
+				for(var day_index = 0; day_index < diary.days.length; day_index++) {
+					var day = diary.days[day_index];
 					for(var i = 0; i < day.items.length; i++) {
 						var item = day.items[i];
 					}
@@ -247,7 +252,12 @@ DONE:
 					var kg_fixed = day.weight.toFixed(1);
 					var kg_str = kg_fixed < 10 ? "0" + kg_fixed : kg_fixed;
 
-					detail_html = "&nbsp;" + day.date + " <b>·</b> " + kg_str + "kg <b>·</b> " + day.kcal + " (" + budget + ")<br>" + detail_html;
+					var utc_day = day.date.getUTCDate() + 1;
+					var utc_month = day.date.getUTCMonth() + 1;
+					var utc_year = day.date.getUTCFullYear() % 100;
+
+					var date_str = (utc_day < 10 ? "0" + utc_day : utc_day) + "/" + (utc_month < 10 ? "0" + utc_month : utc_month) + "/" + (utc_year < 10 ? "0" + utc_year : utc_year);
+					detail_html = "&nbsp;" + date_str + " <b>·</b> " + kg_str + "kg <b>·</b> " + day.kcal + " (" + budget + ")<br>" + detail_html;
 				}
 
 				text_box.innerHTML += "&nbsp;Balance: " + kcal_balance + "<br>";
