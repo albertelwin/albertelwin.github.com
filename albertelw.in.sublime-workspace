@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"record",
+				"record_custom"
+			],
+			[
 				"weight",
 				"weight_str"
 			],
@@ -34,10 +38,6 @@
 			[
 				"kcal",
 				"kcal_streak"
-			],
-			[
-				"record",
-				"record_food"
 			],
 			[
 				"time",
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 10070,
+				"buffer_size": 10236,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10070,
+						"buffer_size": 10236,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								6853,
+								6853
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2301.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1715,9 +1715,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "dol",
 		"selected_items":
 		[
+			[
+				"dol",
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+			],
 			[
 				"",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
@@ -1732,10 +1736,6 @@
 			],
 			[
 				"doly",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
-			],
-			[
-				"dol",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
