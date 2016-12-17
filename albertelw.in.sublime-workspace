@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"weight",
+				"weight_str"
+			],
+			[
+				"wei",
+				"weight_fixed"
+			],
+			[
+				"we",
+				"weight_fixed"
+			],
+			[
+				"inner",
+				"innerHTML"
+			],
+			[
+				"text",
+				"text_box"
+			],
+			[
+				"canvas",
+				"canvas_width"
+			],
+			[
+				"cnavas",
+				"canvas_width"
+			],
+			[
 				"kcal",
 				"kcal_streak"
 			],
@@ -18,10 +46,6 @@
 			[
 				"recor",
 				"record_food"
-			],
-			[
-				"inner",
-				"innerHeight"
 			],
 			[
 				"re",
@@ -490,30 +514,6 @@
 			[
 				"min_w",
 				"min_window_height"
-			],
-			[
-				"min_",
-				"min_window_width"
-			],
-			[
-				"min",
-				"min_window_width"
-			],
-			[
-				"SWP_NO",
-				"SWP_NOREDRAW"
-			],
-			[
-				"client",
-				"client_height"
-			],
-			[
-				"back_buf",
-				"back_buffer_height"
-			],
-			[
-				"back_b",
-				"back_buffer_width"
 			]
 		]
 	},
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 8883,
+				"buffer_size": 10070,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -907,6 +907,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"utc_day",
+			"diary",
+			"·",
+			"weight",
+			"begin_day",
+			"window.innerHeight",
+			"canvas.width =",
+			"fried_egg",
 			", 0.0);",
 			"0",
 			"record_custom(diary, \"apple_pie\"",
@@ -1026,15 +1034,7 @@
 			"0.2f",
 			"demo->tri_v_list.count",
 			"1.0f",
-			"glEnable",
-			"COLOR_FS",
-			"Vec3",
-			"struct Vertex",
-			".x",
-			"time",
-			"GfxKey_return",
-			"GfxKey_",
-			"return"
+			"glEnable"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8883,
+						"buffer_size": 10070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6689,
-								6689
+								12,
+								12
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2392.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
