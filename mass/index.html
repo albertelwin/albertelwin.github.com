@@ -5,7 +5,6 @@ DOING:
 
 TODO:
 	Basis matrix
-	Text rendering
 
 DONE:
 	Graph weight
@@ -225,6 +224,8 @@ DONE:
 				push_food(foods, "oatcake", 46, true);
 				push_food(foods, "fajita", 163, true);
 				push_food(foods, "fajita_steak", 214, true);
+				push_food(foods, "mac_cheese", 892, true);
+				push_food(foods, "lindt_dark_hazelnut", 86, false);
 
 				var diary = APP.diary = { days: [], date: new Date(2016, 11, 9), };
 
@@ -282,6 +283,10 @@ DONE:
 				record_food(diary, foods.fajita_steak, 3);
 
 				begin_day(diary, 76.65711053);
+				record_food(diary, foods.porridge, 3);
+				record_food(diary, foods.oatcake, 6);
+				record_custom(diary, "pesto_pasta", 648, true);
+				record_food(diary, foods.lindt_dark_hazelnut, 3);
 
 				var kcal_balance = 0.0;
 				var kcal_streak = 0;

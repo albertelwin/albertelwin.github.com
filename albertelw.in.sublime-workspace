@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"kg_",
-				"kg_offset"
+				"r_",
+				"r_aspect"
 			],
 			[
-				"r_",
-				"r_kg_range"
+				"kg_",
+				"kg_offset"
 			],
 			[
 				"max_",
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 12015,
+				"buffer_size": 12189,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12015,
+						"buffer_size": 12189,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4933,
-								4933
+								8606,
+								8606
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1716.0,
+						"translation.y": 3016.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
