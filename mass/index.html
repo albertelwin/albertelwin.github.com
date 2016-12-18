@@ -159,7 +159,7 @@ DONE:
 						GL.uniform4f(program.color, bad_color.r, bad_color.g, bad_color.b, 1.0);
 						GL.drawArrays(GL.TRIANGLES, 0, v_buf.count);
 
-						var min_kg = 63.0;
+						var min_kg = 57.0;
 						var max_kg = 89.0;
 						var r_kg_range = 1.0 / (max_kg - min_kg);
 						var kg_offset = -min_kg * r_kg_range;
@@ -174,7 +174,7 @@ DONE:
 							if(day.weight > 0.0) {
 								var w = day.weight * r_kg_range + kg_offset;
 
-								var y = -1.0 + w * 2.0;;
+								var y = -1.0 + w * 2.0;
 
 								if(lines_buf.count == 0) {
 									lines_dat[0] = -1.0;
@@ -280,6 +280,8 @@ DONE:
 				record_custom(diary, "flapjacks", 300);
 				record_custom(diary, "crackers", 100);
 				record_food(diary, foods.fajita_steak, 3);
+
+				begin_day(diary, 76.65711053);
 
 				var kcal_balance = 0.0;
 				var kcal_streak = 0;
