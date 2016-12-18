@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"reco",
+				"record_food"
+			],
+			[
+				"re",
+				"record_food"
+			],
+			[
 				"r_",
 				"r_aspect"
 			],
@@ -72,10 +80,6 @@
 				"record_food"
 			],
 			[
-				"re",
-				"request_animation_frame"
-			],
-			[
 				"request",
 				"requestAnimationFrame"
 			],
@@ -86,10 +90,6 @@
 			[
 				"good",
 				"good_color"
-			],
-			[
-				"reco",
-				"record_custom"
 			],
 			[
 				"rec",
@@ -541,7 +541,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 12189,
+				"buffer_size": 12328,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -761,6 +761,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/GFX/src/math.hpp",
 		"/C/Users/Albert/Downloads/creative_dundee.txt",
 		"/C/Users/Albert/albertelw.in/__gif/main.cpp",
 		"/C/Users/Albert/albertelw.in/profile/index.html",
@@ -779,7 +780,6 @@
 		"/C/Users/Albert/Gif/_vid.bat",
 		"/C/Users/Albert/GFX/src/main.cpp",
 		"/C/Users/Albert/GFX/build.bat",
-		"/C/Users/Albert/GFX/src/math.hpp",
 		"/C/Users/Albert/GFX/src/shd.cpp",
 		"/C/Users/Albert/GFX/src/debug.hpp",
 		"/C/Users/Albert/GFX/src/debug.cpp",
@@ -1119,15 +1119,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12189,
+						"buffer_size": 12328,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8606,
-								8606
+								8745,
+								8745
 							]
 						],
 						"settings":
@@ -1136,7 +1136,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3016.0,
+						"translation.y": 3068.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
