@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"choc",
+				"choc_oat_biscuit"
+			],
+			[
+				"recor",
+				"record_food"
+			],
+			[
+				"record",
+				"record_food"
+			],
+			[
 				"reco",
 				"record_food"
 			],
@@ -34,10 +46,6 @@
 			[
 				"r",
 				"r_aspect"
-			],
-			[
-				"record",
-				"record_custom"
 			],
 			[
 				"weight",
@@ -74,10 +82,6 @@
 			[
 				"time",
 				"timestamp"
-			],
-			[
-				"recor",
-				"record_food"
 			],
 			[
 				"request",
@@ -510,38 +514,16 @@
 			[
 				"srnd",
 				"srnd_vec3"
-			],
-			[
-				"rotat",
-				"rotation"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "albertelw.in.sublime-project",
-			"settings":
-			{
-				"buffer_size": 558,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 2004,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 12328,
+				"buffer_size": 12755,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -761,18 +743,23 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/index.html",
+		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
+		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/README.txt",
+		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/.Legal Fees/jo/concerns.txt",
+		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/Snake Oil Engine Files (CRITICAL)/clownrace_example_project.naga",
+		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/Snake Oil Engine Files (CRITICAL)/_rattle_data/enginepipes.rattle",
+		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/Snake Oil Engine Files (CRITICAL)/DontTreadOnMe/.Recycle Bin/internal-art-memo.txt",
 		"/C/Users/Albert/GFX/src/math.hpp",
 		"/C/Users/Albert/Downloads/creative_dundee.txt",
 		"/C/Users/Albert/albertelw.in/__gif/main.cpp",
 		"/C/Users/Albert/albertelw.in/profile/index.html",
 		"/C/Users/Albert/albertelw.in/__gif/content/avi_to_gif.bat",
-		"/C/Users/Albert/albertelw.in/index.html",
 		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
 		"/C/Users/Albert/Downloads/budget.txt",
 		"/C/Users/Albert/albertelw.in/.gitignore",
 		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/albertelw.in/__gif/sys.hpp",
-		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
 		"/C/Users/Albert/Gif/build.bat",
 		"/C/Users/Albert/Gif/main.cpp",
 		"/C/Fraps/Movies/avi_to_gif.bat",
@@ -883,12 +870,7 @@
 		"/C/Users/Albert/GFX/bin/depth_shader.gl_asm",
 		"/C/Users/Albert/GFX/bin/shd.txt",
 		"/C/Users/Albert/Nova/repo/src/main.cpp",
-		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/win32_init.c",
-		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/wgl_context.c",
-		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/win32_window.c",
-		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/win32_platform.h",
-		"/C/Users/Albert/Authority/email.txt",
-		"/C/Users/Albert/Downloads/com.nianticlabs.pokemongo_0.31.0-2016072902_minAPI19(armeabi-v7a)(nodpi)_apkmirror.com/assets/bin/Data/03ccf4d9ab43db045a53007b816834f6"
+		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/win32_init.c"
 	],
 	"find":
 	{
@@ -907,6 +889,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ms_samosa",
+			"apple_pie",
+			"foods.samosa",
+			"lentil_soup",
 			"r_aspect",
 			"width =",
 			"v_buf",
@@ -1030,11 +1016,7 @@
 			"glDisable",
 			"glEnable",
 			"debug",
-			"overdraw",
-			"TEXT_FS",
-			"0.1f",
-			"1.0f",
-			"0.2f"
+			"overdraw"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1052,82 +1034,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "albertelw.in.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								343
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "mass/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12328,
+						"buffer_size": 12755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8745,
-								8745
+								6178,
+								6178
 							]
 						],
 						"settings":
@@ -1136,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3068.0,
+						"translation.y": 2483.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

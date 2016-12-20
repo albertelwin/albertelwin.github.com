@@ -217,10 +217,12 @@ DONE:
 				push_food(foods, "crisps", 500);
 				push_food(foods, "stroopwaffel", 180);
 				push_food(foods, "apple_pie", 550);
-				push_food(foods, "samosa", 227, true);
+				push_food(foods, "ms_samosa", 227, true);
+				push_food(foods, "red_lentil_soup", 142, true);
 				push_food(foods, "baxter_country", 145, true);
 				push_food(foods, "baxter_lentil", 172, true);
 				push_food(foods, "porridge", 92, true);
+				push_food(foods, "choc_oat_biscuit", 45, false);
 				push_food(foods, "oatcake", 46, true);
 				push_food(foods, "fajita", 163, true);
 				push_food(foods, "fajita_steak", 214, true);
@@ -264,7 +266,7 @@ DONE:
 				record_food(diary, foods.apple_pie);
 
 				begin_day(diary);
-				record_food(diary, foods.samosa, 2);
+				record_food(diary, foods.ms_samosa, 2);
 				record_custom(diary, "tomato_soup", 200, true);
 				record_custom(diary, "sweet", 100);
 				record_food(diary, foods.crisps);
@@ -290,6 +292,11 @@ DONE:
 
 				begin_day(diary, 76.65711053);
 				record_food(diary, foods.porridge, 3);
+				record_food(diary, foods.oatcake, 6);
+				record_food(diary, foods.crisps, 0.4);
+				record_food(diary, foods.lindt_dark_hazelnut, 3);
+				record_food(diary, foods.red_lentil_soup);
+				record_food(diary, foods.choc_oat_biscuit, 7);
 
 				var kcal_balance = 0.0;
 				var kcal_streak = 0;
