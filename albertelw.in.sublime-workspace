@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
-				"choc",
-				"choc_oat_biscuit"
+				"record",
+				"record_custom"
 			],
 			[
 				"recor",
+				"record_custom"
+			],
+			[
+				"rec",
 				"record_food"
 			],
 			[
-				"record",
-				"record_food"
+				"choc",
+				"choc_oat_biscuit"
 			],
 			[
 				"reco",
@@ -94,10 +98,6 @@
 			[
 				"good",
 				"good_color"
-			],
-			[
-				"rec",
-				"record_custom"
 			],
 			[
 				"apple",
@@ -523,7 +523,7 @@
 			"file": "mass/index.html",
 			"settings":
 			{
-				"buffer_size": 12755,
+				"buffer_size": 13281,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12755,
+						"buffer_size": 13281,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6178,
-								6178
+								8780,
+								8780
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2483.0,
+						"translation.y": 3588.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1639,15 +1639,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "dol",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"dol",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+				"",
+				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
 			],
 			[
-				"",
+				"dolly",
+				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
+			],
+			[
+				"dol",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
