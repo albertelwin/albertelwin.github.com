@@ -231,6 +231,7 @@ DONE:
 				push_food(foods, "shepherds_pie", 500, true);
 				push_food(foods, "mulled_wine", 100, false);
 				push_food(foods, "caramel_wafer", 134, false);
+				push_food(foods, "poached_egg", 71, true);
 
 				var diary = APP.diary = { days: [], date: new Date(2016, 11, 9), };
 
@@ -307,6 +308,14 @@ DONE:
 				record_food(diary, foods.shepherds_pie, 1.2);
 				record_food(diary, foods.mulled_wine);
 				record_food(diary, foods.caramel_wafer, 2);
+
+				begin_day(diary, 76.2035);
+				record_food(diary, foods.poached_egg, 2);
+				record_custom(diary, "buttered_bread", 200, true);
+				record_food(diary, foods.caramel_wafer, 2);
+				record_custom(diary, "bucksfizz", 170);
+				record_custom(diary, "white_chocolate", 80);
+
 
 				// record_custom(diary, "christmas_dinner", 900, true);
 				// record_custom(diary, "poached_egg", 71);
