@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"ms_",
+				"ms_pecan_cookie"
+			],
+			[
+				"rec",
+				"record_food"
+			],
+			[
+				"kcal_",
+				"kcal_target"
+			],
+			[
+				"getUTC",
+				"getUTCMonth"
+			],
+			[
+				"kcal",
+				"kcal_total"
+			],
+			[
+				"w",
+				"weight"
+			],
+			[
+				"kca",
+				"kcal_avg"
+			],
+			[
 				"reco",
 				"record_custom"
 			],
@@ -14,10 +42,6 @@
 			[
 				"recor",
 				"record_custom"
-			],
-			[
-				"rec",
-				"record_food"
 			],
 			[
 				"choc",
@@ -78,10 +102,6 @@
 			[
 				"cnavas",
 				"canvas_width"
-			],
-			[
-				"kcal",
-				"kcal_streak"
 			],
 			[
 				"time",
@@ -494,36 +514,16 @@
 			[
 				"ange",
 				"angle_axis"
-			],
-			[
-				"T",
-				"TO_DEG"
-			],
-			[
-				"exp",
-				"exp_q"
-			],
-			[
-				"xy",
-				"xyz"
-			],
-			[
-				"ex",
-				"exp_q"
-			],
-			[
-				"srnd",
-				"srnd_vec3"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "mass/index.html",
+			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 13603,
+				"buffer_size": 15105,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -743,6 +743,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/__gif/build.bat",
+		"/C/Users/Albert/albertelw.in/.gitignore",
+		"/C/Users/Albert/albertelw.in/mass/index.html",
 		"/C/Users/Albert/albertelw.in/index.html",
 		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
 		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/README.txt",
@@ -757,8 +760,6 @@
 		"/C/Users/Albert/albertelw.in/__gif/content/avi_to_gif.bat",
 		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
 		"/C/Users/Albert/Downloads/budget.txt",
-		"/C/Users/Albert/albertelw.in/.gitignore",
-		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/albertelw.in/__gif/sys.hpp",
 		"/C/Users/Albert/Gif/build.bat",
 		"/C/Users/Albert/Gif/main.cpp",
@@ -869,8 +870,7 @@
 		"/C/Users/Albert/GFX/bin/text_shader.gl_asm",
 		"/C/Users/Albert/GFX/bin/depth_shader.gl_asm",
 		"/C/Users/Albert/GFX/bin/shd.txt",
-		"/C/Users/Albert/Nova/repo/src/main.cpp",
-		"/C/Users/Albert/Downloads/ogl-samples-4.5.3.0/ogl-samples/external/glfw-3.1.1/src/win32_init.c"
+		"/C/Users/Albert/Nova/repo/src/main.cpp"
 	],
 	"find":
 	{
@@ -889,6 +889,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			", false",
+			"current_date",
+			"date",
+			"getUTCMonth",
+			"kcal_avg",
+			"weight",
+			"BMR",
+			"bmr",
 			"poached_egg",
 			"ms_samosa",
 			"apple_pie",
@@ -1008,15 +1016,7 @@
 			"0",
 			"1",
 			"0",
-			"cmd",
-			"width",
-			"i",
-			"c_str",
-			"str",
-			"0.05f",
-			"glDisable",
-			"glEnable",
-			"debug"
+			"cmd"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1039,19 +1039,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "mass/index.html",
+					"file": "__mass/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13603,
+						"buffer_size": 15105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9668,
-								9668
+								11997,
+								11997
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3495.0,
+						"translation.y": 4485.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1123,15 +1123,15 @@
 		[
 			[
 				"",
-				"mass\\index.html"
+				"__gif\\build.bat"
+			],
+			[
+				"inde",
+				"__mass\\index.html"
 			],
 			[
 				"index",
 				"mass\\index.html"
-			],
-			[
-				"inde",
-				"index.html"
 			],
 			[
 				"ig",
@@ -1644,15 +1644,15 @@
 		[
 			[
 				"",
-				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
-			],
-			[
-				"dolly",
-				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
 				"dol",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+			],
+			[
+				"dolly",
+				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
 			],
 			[
 				"alber",
