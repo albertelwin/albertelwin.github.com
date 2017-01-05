@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
-				"ms_",
-				"ms_pecan_cookie"
+				"re",
+				"record_food"
+			],
+			[
+				"record",
+				"record_custom"
+			],
+			[
+				"choc",
+				"chocolate"
+			],
+			[
+				"kcal",
+				"kcal_good"
+			],
+			[
+				"poached",
+				"poached_eggs_on_toast"
 			],
 			[
 				"rec",
-				"record_food"
+				"record_custom"
+			],
+			[
+				"reco",
+				"record_custom"
+			],
+			[
+				"ms_",
+				"ms_pecan_cookie"
 			],
 			[
 				"kcal_",
@@ -20,10 +44,6 @@
 				"getUTCMonth"
 			],
 			[
-				"kcal",
-				"kcal_total"
-			],
-			[
 				"w",
 				"weight"
 			],
@@ -32,24 +52,8 @@
 				"kcal_avg"
 			],
 			[
-				"reco",
-				"record_custom"
-			],
-			[
-				"record",
-				"record_custom"
-			],
-			[
 				"recor",
 				"record_custom"
-			],
-			[
-				"choc",
-				"choc_oat_biscuit"
-			],
-			[
-				"re",
-				"record_food"
 			],
 			[
 				"r_",
@@ -510,10 +514,6 @@
 			[
 				"KEY_",
 				"KEY_PRESSED"
-			],
-			[
-				"ange",
-				"angle_axis"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 15105,
+				"buffer_size": 19740,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -743,6 +743,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/Downloads/unspecified",
 		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/albertelw.in/.gitignore",
 		"/C/Users/Albert/albertelw.in/mass/index.html",
@@ -869,12 +870,11 @@
 		"/C/Users/Albert/GFX/bin/post_shader.gl_asm",
 		"/C/Users/Albert/GFX/bin/text_shader.gl_asm",
 		"/C/Users/Albert/GFX/bin/depth_shader.gl_asm",
-		"/C/Users/Albert/GFX/bin/shd.txt",
-		"/C/Users/Albert/Nova/repo/src/main.cpp"
+		"/C/Users/Albert/GFX/bin/shd.txt"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -889,6 +889,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			");\n",
+			"record_custom",
+			" )",
+			"pecan_cookie",
+			"\t\t\t\t//",
+			");\n",
+			"record_cusomt",
+			"\t\t\t\t",
+			"nbsp",
+			"push_food",
+			".good",
+			"record_custom(",
+			");",
+			"record_food",
 			", false",
 			"current_date",
 			"date",
@@ -1002,21 +1016,7 @@
 			"vid_progress",
 			"0",
 			"loop muted",
-			"vid3",
-			"vid0",
-			">\n",
-			"content_elem",
-			"vids_elem",
-			"imgs_elem",
-			"£",
-			"></video>",
-			"=\"true\"",
-			"rc/",
-			"src",
-			"0",
-			"1",
-			"0",
-			"cmd"
+			"vid3"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15105,
+						"buffer_size": 19740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11997,
-								11997
+								15240,
+								15240
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4485.0,
+						"translation.y": 5226.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1071,7 +1071,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 42.0
 	},
 	"input":
 	{
@@ -1652,7 +1652,15 @@
 			],
 			[
 				"dolly",
-				"C:\\Users\\Albert\\Dolly\\repo\\dolly.sublime-project"
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+			],
+			[
+				"alb",
+				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
+			],
+			[
+				"doly",
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
 				"alber",
@@ -1660,10 +1668,6 @@
 			],
 			[
 				"do",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
-			],
-			[
-				"doly",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
