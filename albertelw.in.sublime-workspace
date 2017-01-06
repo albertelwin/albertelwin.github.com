@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"reco",
+				"record_food"
+			],
+			[
 				"re",
 				"record_food"
 			],
@@ -25,10 +29,6 @@
 			],
 			[
 				"rec",
-				"record_custom"
-			],
-			[
-				"reco",
 				"record_custom"
 			],
 			[
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 19740,
+				"buffer_size": 20223,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -890,6 +890,9 @@
 		"find_history":
 		[
 			");\n",
+			"begin_day(diary, 77.47358);",
+			"poached_egg",
+			");\n",
 			"record_custom",
 			" )",
 			"pecan_cookie",
@@ -1013,10 +1016,7 @@
 			"vid",
 			"poster=",
 			"vid0",
-			"vid_progress",
-			"0",
-			"loop muted",
-			"vid3"
+			"vid_progress"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19740,
+						"buffer_size": 20223,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15240,
-								15240
+								15642,
+								15642
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5226.0,
+						"translation.y": 5640.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1644,11 +1644,19 @@
 		[
 			[
 				"",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
+			],
+			[
+				"koko",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"dol",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-workspace"
+			],
+			[
+				"do",
+				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-workspace"
 			],
 			[
 				"dolly",
@@ -1665,10 +1673,6 @@
 			[
 				"alber",
 				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
-			],
-			[
-				"do",
-				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
 			],
 			[
 				"g",
