@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"reoc",
+				"record_food"
+			],
+			[
+				"nando",
+				"nandos_veggie_burger"
+			],
+			[
 				"reco",
 				"record_food"
 			],
@@ -506,14 +514,6 @@
 			[
 				"rotate_",
 				"rotate_quat"
-			],
-			[
-				"angle",
-				"angle_axis"
-			],
-			[
-				"KEY_",
-				"KEY_PRESSED"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 20220,
+				"buffer_size": 20725,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -889,6 +889,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"nandos",
 			");\n",
 			"begin_day(diary, 77.47358);",
 			"poached_egg",
@@ -1015,8 +1016,7 @@
 			"0",
 			"vid",
 			"poster=",
-			"vid0",
-			"vid_progress"
+			"vid0"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20220,
+						"buffer_size": 20725,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15639,
-								15639
+								16144,
+								16144
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5640.0,
+						"translation.y": 5666.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1071,7 +1071,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 42.0
+		"height": 34.0
 	},
 	"input":
 	{
