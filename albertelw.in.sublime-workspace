@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 21083,
+				"buffer_size": 21128,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21083,
+						"buffer_size": 21128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15525,
-								15525
+								15470,
+								15470
 							]
 						],
 						"settings":
@@ -1639,15 +1639,15 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "alber",
+		"last_filter": "koko",
 		"selected_items":
 		[
 			[
-				"alber",
+				"koko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
-				"koko",
+				"alber",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
