@@ -34,7 +34,7 @@
 					}
 
 					console.log(text);
-					log_elem.innerHTML += text + "<br>";
+					log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
 				},
 
 				printErr: function(text) {
@@ -43,7 +43,7 @@
 					}
 
 					console.error(text);
-					log_elem.innerHTML += text + "<br>";
+					log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
 				},
 
 				canvas: (function() {
