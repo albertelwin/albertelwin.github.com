@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"reco",
+				"record_food"
+			],
+			[
+				"record_",
+				"record_food"
+			],
+			[
 				"reoc",
 				"record_food"
 			],
 			[
 				"nando",
 				"nandos_veggie_burger"
-			],
-			[
-				"reco",
-				"record_food"
 			],
 			[
 				"re",
@@ -510,10 +514,6 @@
 			[
 				"DEFOR",
 				"DEFORM_FS"
-			],
-			[
-				"rotate_",
-				"rotate_quat"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 20725,
+				"buffer_size": 21083,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -874,7 +874,7 @@
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -889,6 +889,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fajita",
+			"record_custom(diary, \"club_orange\", 116",
+			"club_orange",
 			"nandos",
 			");\n",
 			"begin_day(diary, 77.47358);",
@@ -1013,10 +1016,7 @@
 			"0",
 			"vid",
 			"vids.children",
-			"0",
-			"vid",
-			"poster=",
-			"vid0"
+			"0"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20725,
+						"buffer_size": 21083,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16144,
-								16144
+								15525,
+								15525
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5666.0,
+						"translation.y": 5844.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1639,15 +1639,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "alber",
 		"selected_items":
 		[
 			[
-				"",
+				"alber",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"koko",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
+			],
+			[
+				"",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
@@ -1669,10 +1673,6 @@
 			[
 				"doly",
 				"C:\\Users\\Albert\\Dolly2\\repo\\dolly2.sublime-project"
-			],
-			[
-				"alber",
-				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
 			],
 			[
 				"g",
