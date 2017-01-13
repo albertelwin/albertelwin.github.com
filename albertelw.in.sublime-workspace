@@ -4,7 +4,23 @@
 		"selected_items":
 		[
 			[
+				"reo",
+				"record_food"
+			],
+			[
 				"reco",
+				"record_custom"
+			],
+			[
+				"recor",
+				"record_food"
+			],
+			[
+				"reoc",
+				"record_custom"
+			],
+			[
+				"record_",
 				"record_custom"
 			],
 			[
@@ -12,23 +28,11 @@
 				"record_custom"
 			],
 			[
-				"reoc",
-				"record_food"
-			],
-			[
 				"record",
 				"record_food"
 			],
 			[
-				"recor",
-				"record_custom"
-			],
-			[
 				"rec",
-				"record_food"
-			],
-			[
-				"record_",
 				"record_food"
 			],
 			[
@@ -510,10 +514,6 @@
 			[
 				"u_no",
 				"u_normal_map"
-			],
-			[
-				"DEFOR",
-				"DEFORM_FS"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 23100,
+				"buffer_size": 23545,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23100,
+						"buffer_size": 23545,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18478,
-								18478
+								17883,
+								17883
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6253.0,
+						"translation.y": 6520.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1639,16 +1639,16 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "koko",
+		"last_filter": "alber",
 		"selected_items":
 		[
 			[
-				"koko",
+				"alber",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
-				"alber",
-				"C:\\Users\\Albert\\albertelw.in\\albertelw.in.sublime-project"
+				"koko",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"alb",
