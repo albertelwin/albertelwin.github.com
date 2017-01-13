@@ -1050,8 +1050,8 @@
 						"selection":
 						[
 							[
-								17883,
-								17883
+								18799,
+								18799
 							]
 						],
 						"settings":
@@ -1639,9 +1639,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "alber",
+		"last_filter": "kok",
 		"selected_items":
 		[
+			[
+				"kok",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
+			],
 			[
 				"alber",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
