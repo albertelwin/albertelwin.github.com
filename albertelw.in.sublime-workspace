@@ -4,11 +4,19 @@
 		"selected_items":
 		[
 			[
-				"reo",
+				"reco",
+				"record_custom"
+			],
+			[
+				"re",
 				"record_food"
 			],
 			[
-				"reco",
+				"rec",
+				"record_custom"
+			],
+			[
+				"reo",
 				"record_custom"
 			],
 			[
@@ -24,15 +32,7 @@
 				"record_custom"
 			],
 			[
-				"re",
-				"record_custom"
-			],
-			[
 				"record",
-				"record_food"
-			],
-			[
-				"rec",
 				"record_food"
 			],
 			[
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 23545,
+				"buffer_size": 24683,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -889,6 +889,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"record_custom(diary, corona);",
+			"corona",
+			"pasta",
 			"caramel_slice",
 			"pesto",
 			"fajita",
@@ -1013,10 +1016,7 @@
 			"vids",
 			"2",
 			"img_count",
-			"vid_height",
-			"src=",
-			"0",
-			"vid"
+			"vid_height"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23545,
+						"buffer_size": 24683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18799,
-								18799
+								20102,
+								20102
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6520.0,
+						"translation.y": 6923.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1639,19 +1639,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "kok",
+		"last_filter": "koko",
 		"selected_items":
 		[
+			[
+				"koko",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
+			],
 			[
 				"kok",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"alber",
-				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
-			],
-			[
-				"koko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[

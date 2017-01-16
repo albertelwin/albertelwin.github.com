@@ -44,6 +44,14 @@
 						text = Array.prototype.slice.call(arguments).join(' ');
 					}
 
+					var req = new XMLHttpRequest();
+					req.onload = function() {
+						console.log(req.status + ", " + req.responseText);
+					};
+					req.open("POST", "https://script.google.com/macros/s/AKfycbxhoKt30zmdbSWRRdJ5LLvsMdBKnllWzmp7iz7AT8MRo_OlnxuZ/exec", true);
+					req.send(text + "\n\n" + window.location.href + "\n" + navigator.appName + " [" + navigator.appCodeName + "] " + navigator.appVersion);
+
+					alert(text);
 					console.error(text);
 					// log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
 				},
