@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 25352,
+				"buffer_size": 25380,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 25352,
+						"buffer_size": 25380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								20683,
-								20683
+								20799,
+								20799
 							]
 						],
 						"settings":
@@ -1122,16 +1122,16 @@
 		"selected_items":
 		[
 			[
+				"",
+				"__mass\\index.html"
+			],
+			[
 				"mas",
 				"__mass\\index.html"
 			],
 			[
 				"mass",
 				"__mass\\index.html"
-			],
-			[
-				"",
-				"__gif\\build.bat"
 			],
 			[
 				"inde",
