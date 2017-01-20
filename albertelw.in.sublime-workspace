@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"reco",
+				"record_custom"
+			],
+			[
+				"recor",
+				"record_food"
+			],
+			[
 				"poached",
 				"poached_egg"
 			],
 			[
 				"grap",
 				"grape"
-			],
-			[
-				"reco",
-				"record_food"
 			],
 			[
 				"rec",
@@ -30,10 +34,6 @@
 			[
 				"reo",
 				"record_custom"
-			],
-			[
-				"recor",
-				"record_food"
 			],
 			[
 				"reoc",
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 26149,
+				"buffer_size": 26341,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -743,13 +743,13 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Content/UIResources/js/coherent.js",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Content/UIResources/Main.html",
 		"/C/Users/Albert/albertelw.in/__mass/index.html",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Source/FrontEnd/Public/Engine/FEGameMode.h",
 		"/C/Users/Albert/Authority/todo.txt",
 		"/C/Users/Albert/Downloads/unspecified",
-		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/albertelw.in/.gitignore",
 		"/C/Users/Albert/albertelw.in/mass/index.html",
 		"/C/Users/Albert/albertelw.in/index.html",
@@ -889,6 +889,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"noodles",
 			"record_custom(diary, ",
 			"record_custom(",
 			"record_cuomst",
@@ -1015,8 +1016,7 @@
 			"firefox_or_ie",
 			"no_webkit_scrollbar",
 			"webkit_scrollbar_not_supported",
-			"100px",
-			"15px"
+			"100px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 26149,
+						"buffer_size": 26341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3305,
-								3305
+								21024,
+								21024
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1528.0,
+						"translation.y": 7655.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1122,6 +1122,10 @@
 		"selected_items":
 		[
 			[
+				"bu",
+				"__gif\\build.bat"
+			],
+			[
 				"mas",
 				"__mass\\index.html"
 			],
@@ -1144,10 +1148,6 @@
 			[
 				"ig",
 				".gitignore"
-			],
-			[
-				"bu",
-				"__gif\\build.bat"
 			],
 			[
 				"sys",
@@ -1639,15 +1639,15 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ko",
+		"last_filter": "koko",
 		"selected_items":
 		[
 			[
-				"ko",
+				"koko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
-				"koko",
+				"ko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
