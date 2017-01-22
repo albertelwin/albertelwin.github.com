@@ -1,22 +1,36 @@
+
 <!doctype html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Jelly</title>
-		<!-- TODO: Only import this if we're in dev mode!! -->
-		<!-- <script src='dev/prefs.js'></script> -->
+		<style>
+			::-webkit-scrollbar { display: none; width: 0 !important; }
+		</style>
+
+		<!-- NOTE: Web App -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5ad56d">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
 	</head>
 	<body style='margin: 0; background-color: #000000;'>
-
 		<!-- <div style='width: 960px; height: 540px; text-align: center; vertical-align: middle; display: table-cell'> -->
-		<div style='position: absolute; margin: auto; top: 50%; left: 50%; -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);'>
+		<!-- <div style='position: absolute; margin: auto; top: 50%; left: 50%; -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);'> -->
+		<div style='width: 100%; text-align: center;'>
 			<div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF; display: none;'></div>
 			<!-- <img id='loading' style='' src='loading.gif'> -->
-			<img id="loading" style="" src="">
-			<canvas id='canvas' style='padding: none; border 0px none; display: none; cursor: '';' oncontextmenu='event.preventDefault()'></canvas>
+			<img id='loading' style='display: none;' src='loading.gif'>
+			<canvas id='canvas' style="padding: none; border 0px none; display: none; cursor: '';" oncontextmenu='event.preventDefault()'></canvas>
 		</div>
+		<!-- <div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF;'></div> -->
 
+		<!-- NOTE: Some servers struggle to load the .mem and .data files to they need to be renamed to .js and changed in index.html and koko.js -->
 		<script type='text/javascript'>
 			var log_elem = document.getElementById('log');
 			var loading_elem = document.getElementById('loading');
@@ -35,6 +49,7 @@
 					}
 
 					console.log(text);
+					// log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
 				},
 
 				printErr: function(text) {
@@ -42,7 +57,16 @@
 						text = Array.prototype.slice.call(arguments).join(' ');
 					}
 
+					var req = new XMLHttpRequest();
+					req.onload = function() {
+						console.log(req.status + ", " + req.responseText);
+					};
+					req.open("POST", "https://script.google.com/macros/s/AKfycbxhoKt30zmdbSWRRdJ5LLvsMdBKnllWzmp7iz7AT8MRo_OlnxuZ/exec", true);
+					req.send(text + "\n\n" + window.location.href + "\n" + navigator.appName + " [" + navigator.appCodeName + "] " + navigator.appVersion);
+
+					// alert(text);
 					console.error(text);
+					// log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
 				},
 
 				canvas: (function() {
