@@ -20,7 +20,7 @@
 		<meta name="mobile-web-app-capable" content="yes">
 	</head>
 	<body style='margin: 0; background-color: #000000;'>
-		<!-- <div style='width: 960px; height: 540px; text-align: center; vertical-align: middle; display: table-cell'> -->
+		<!-- <div style='width: 960px; height: 540px; text-align: center; vertical-align: middle; display: table-cell;'> -->
 		<!-- <div style='position: absolute; margin: auto; top: 50%; left: 50%; -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);'> -->
 		<div style='width: 100%; text-align: center;'>
 			<div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF; display: none;'></div>
@@ -35,11 +35,39 @@
 			var loading_elem = document.getElementById('loading');
 			var canvas_elem = document.getElementById('canvas');
 
+			function on_resize() {
+				var canvas = document.getElementById("canvas");
+
+				var canvas_aspect = 16.0 / 9.0;
+				var window_aspect = window.innerWidth / window.innerHeight;
+
+				if(canvas_aspect > window_aspect) {
+					canvas.width = window.innerWidth;
+					canvas.height = canvas.width / canvas_aspect;
+				}
+				else {
+					canvas.height = window.innerHeight;
+					canvas.width = canvas.height * canvas_aspect;
+				}
+
+				if(loading_elem.style.display === '') {
+					//TODO: Hack!!
+					loading_elem.width = canvas.width * (300.0 / 960.0);
+					loading_elem.style.marginTop = ((37.0 * (canvas.height / 540.0)) | 0) + "px";
+				}
+
+				// console.log("on_resize(), " + canvas.width + ", " + canvas.height);
+			};
+			on_resize();
+			window.addEventListener("resize", on_resize);
+
 			var Module = {
 				postRun: [ function() {
 					log_elem.innerHTML = '';
 					canvas.style.display = '';
 					loading_elem.style.display = 'none';
+
+					on_resize();
 				}],
 
 				print: function(text) {
