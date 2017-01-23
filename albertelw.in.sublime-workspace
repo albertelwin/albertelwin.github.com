@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 27422,
+				"buffer_size": 27572,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27422,
+						"buffer_size": 27572,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22841,
-								22841
+								22889,
+								22889
 							]
 						],
 						"settings":
