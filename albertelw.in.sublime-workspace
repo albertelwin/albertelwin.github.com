@@ -4,15 +4,19 @@
 		"selected_items":
 		[
 			[
-				"reoc",
-				"record_custom"
-			],
-			[
-				"reco",
-				"record_food"
+				"ms_",
+				"ms_samosa"
 			],
 			[
 				"rec",
+				"record_food"
+			],
+			[
+				"reco",
+				"record_custom"
+			],
+			[
+				"reoc",
 				"record_custom"
 			],
 			[
@@ -58,10 +62,6 @@
 			[
 				"kcal",
 				"kcal_good"
-			],
-			[
-				"ms_",
-				"ms_pecan_cookie"
 			],
 			[
 				"kcal_",
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 27668,
+				"buffer_size": 27927,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27668,
+						"buffer_size": 27927,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22632,
-								22632
+								22818,
+								22818
 							]
 						],
 						"settings":

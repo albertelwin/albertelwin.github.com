@@ -118,7 +118,7 @@
 				monitorRunDependencies: function(left) {
 					this.totalDependencies = Math.max(this.totalDependencies, left);
 					//TODO: Do we really need to see this??
-					// Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
 				}
 			};
 
