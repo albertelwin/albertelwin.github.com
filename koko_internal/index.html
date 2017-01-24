@@ -84,13 +84,12 @@
 						text = Array.prototype.slice.call(arguments).join(' ');
 					}
 
-					//TODO: TEMP!!
-					// var req = new XMLHttpRequest();
-					// req.onload = function() {
-					// 	console.log(req.status + ", " + req.responseText);
-					// };
-					// req.open("POST", "https://script.google.com/macros/s/AKfycbxhoKt30zmdbSWRRdJ5LLvsMdBKnllWzmp7iz7AT8MRo_OlnxuZ/exec", true);
-					// req.send(text + "\n\n" + window.location.href + "\n" + navigator.appName + " [" + navigator.appCodeName + "] " + navigator.appVersion);
+					var req = new XMLHttpRequest();
+					req.onload = function() {
+						console.log(req.status + ", " + req.responseText);
+					};
+					req.open("POST", "https://script.google.com/macros/s/AKfycbxhoKt30zmdbSWRRdJ5LLvsMdBKnllWzmp7iz7AT8MRo_OlnxuZ/exec", true);
+					req.send(text + "\n\n" + window.location.href + "\n" + navigator.appName + " [" + navigator.appCodeName + "] " + navigator.appVersion);
 
 					// alert(text);
 					console.error(text);
@@ -119,7 +118,7 @@
 				monitorRunDependencies: function(left) {
 					this.totalDependencies = Math.max(this.totalDependencies, left);
 					//TODO: Do we really need to see this??
-					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+					// Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
 				}
 			};
 
