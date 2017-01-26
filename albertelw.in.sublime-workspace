@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"ms_",
-				"ms_samosa"
+				"rec",
+				"record_custom"
 			],
 			[
-				"rec",
+				"re",
 				"record_food"
+			],
+			[
+				"ms_",
+				"ms_samosa"
 			],
 			[
 				"reco",
@@ -21,10 +25,6 @@
 			],
 			[
 				"recor",
-				"record_food"
-			],
-			[
-				"re",
 				"record_food"
 			],
 			[
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 27969,
+				"buffer_size": 28130,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -889,6 +889,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"chips",
 			"begin_day(diary, 0.0);",
 			"// record_food(diary, foods.roast_nuts",
 			"roast_nuts",
@@ -1015,8 +1016,7 @@
 			"(vids_elem",
 			"(vids_elem.of",
 			"vids_elem",
-			"(vids_elem",
-			"firefox_ie_or_edge"
+			"(vids_elem"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1043,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27969,
+						"buffer_size": 28130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								23388,
-								23388
+								21957,
+								21957
 							]
 						],
 						"settings":
@@ -1060,7 +1060,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 8015.0,
+						"translation.y": 8032.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1639,19 +1639,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "koko",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+			],
 			[
 				"koko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"je",
-				"C:\\Users\\Albert\\Jelly\\repo\\jelly.sublime-project"
-			],
-			[
-				"",
 				"C:\\Users\\Albert\\Jelly\\repo\\jelly.sublime-project"
 			],
 			[
