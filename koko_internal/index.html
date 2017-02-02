@@ -29,7 +29,7 @@
 		</div>
 		<!-- <div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF;'></div> -->
 
-		<!-- NOTE: Some servers struggle to load the .mem and .data files to they need to be renamed to .js and changed in index.html and koko.js -->
+		<!-- NOTE: Some servers struggle to load the .mem and .data files so they need to be renamed to .js and changed in index.html and koko.js -->
 		<script type='text/javascript'>
 			var log_elem = document.getElementById('log');
 			var loading_elem = document.getElementById('loading');
@@ -144,7 +144,7 @@
 		<script>
 
         (function() {
-          var memoryInitializer = 'koko_mem.js';
+          var memoryInitializer = 'koko.html.mem';
           if (typeof Module['locateFile'] === 'function') {
             memoryInitializer = Module['locateFile'](memoryInitializer);
           } else if (Module['memoryInitializerPrefixURL']) {
