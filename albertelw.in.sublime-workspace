@@ -4,52 +4,92 @@
 		"selected_items":
 		[
 			[
-				"re",
+				"recor",
 				"record_food"
+			],
+			[
+				"record",
+				"record_custom"
+			],
+			[
+				"reco",
+				"record_food"
+			],
+			[
+				"TO_",
+				"KG_TO_STONE"
+			],
+			[
+				"reoc",
+				"record_custom"
 			],
 			[
 				"rec",
 				"record_food"
 			],
 			[
-				"reco",
-				"record_custom"
-			],
-			[
-				"pea",
-				"peanut_butter_toast"
-			],
-			[
-				"reo",
-				"record_custom"
-			],
-			[
-				"reoc",
-				"record_food"
-			],
-			[
-				"record",
-				"record_food"
+				"dash_",
+				"dash_y"
 			],
 			[
 				"reocr",
+				"record_custom"
+			],
+			[
+				"sua",
+				"sausage_roll"
+			],
+			[
+				"re",
 				"record_food"
 			],
 			[
-				"recor",
-				"record_custom"
+				"butter",
+				"buttered_bread"
+			],
+			[
+				"fala",
+				"falafel_wrap"
 			],
 			[
 				"lemon",
 				"lemon_flapjack"
 			],
 			[
-				"que",
-				"quorn_sausage"
-			],
-			[
 				"record_",
 				"record_food"
+			],
+			[
+				"buter",
+				"buttered_bread"
+			],
+			[
+				"egg",
+				"egg_roll"
+			],
+			[
+				"gan",
+				"granola_bar"
+			],
+			[
+				"peanut_bu",
+				"peanut_butter_toast"
+			],
+			[
+				"reo",
+				"record_food"
+			],
+			[
+				"buttered",
+				"buttered_roll"
+			],
+			[
+				"pea",
+				"peanut_butter_toast"
+			],
+			[
+				"que",
+				"quorn_sausage"
 			],
 			[
 				"cara",
@@ -474,46 +514,6 @@
 			[
 				"sbu",
 				"subdiv_step"
-			],
-			[
-				"sub",
-				"subdivs"
-			],
-			[
-				"hash",
-				"hashed_vertex"
-			],
-			[
-				"bind",
-				"bindings"
-			],
-			[
-				"PRO",
-				"PROGRAM_LIST_Y"
-			],
-			[
-				"POR",
-				"PROGRAM_LIST_Y"
-			],
-			[
-				"BASIC",
-				"BASIC_PROGRAM_BINDINGS_X"
-			],
-			[
-				"bindg",
-				"binding_ptr"
-			],
-			[
-				"glGe",
-				"glGetAttribLocation"
-			],
-			[
-				"PROG",
-				"PROGRAM_LIST_X"
-			],
-			[
-				"GLTe",
-				"GLTexture"
 			]
 		]
 	},
@@ -523,7 +523,16 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 35574,
+				"buffer_size": 42647,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2050,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -743,6 +752,30 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/GFX/dat/horse_ascii.fbx",
+		"/C/Users/Albert/GFX/dat/fbx_ascii.fbx",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_55_40.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_55_30.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_51_35.txt",
+		"/C/Dev/dev.bat",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_44_16.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_43_49.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_43_45.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_53.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_44.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_19.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_14.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_05.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_41_02.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_38_06.txt",
+		"/C/Users/Albert/Downloads/Projects/Glitchshop/repo/bin/lzw_output.txt",
+		"/C/Users/Albert/Downloads/adhoc_network.txt",
+		"/C/Users/Albert/Downloads/killbox_profile.txt",
+		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
+		"/C/Users/Albert/Downloads/albert_elwin_session_4_notes.txt",
+		"/C/Users/Albert/Animation/Assets/Horse/Model/Horse.FBX",
+		"/C/Users/Albert/Downloads/PC Computer - Sonic Generations - Sonic the Hedgehog Modern/Sonic (Modern)/Credits.txt",
+		"/C/Users/Albert/albertelw.in/.gitignore",
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/Theme - Default/Default.sublime-theme",
 		"/C/Users/Albert/Koko/repo2/src/asset_format.hpp",
 		"/C/Users/Albert/Koko/repo/src/web_main.cpp",
@@ -757,10 +790,8 @@
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Source/FrontEnd/Public/Engine/FEGameMode.h",
 		"/C/Users/Albert/Authority/todo.txt",
 		"/C/Users/Albert/Downloads/unspecified",
-		"/C/Users/Albert/albertelw.in/.gitignore",
 		"/C/Users/Albert/albertelw.in/mass/index.html",
 		"/C/Users/Albert/albertelw.in/index.html",
-		"/C/Users/Albert/albertelw.in/albertelw.in.sublime-project",
 		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/README.txt",
 		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/.Legal Fees/jo/concerns.txt",
 		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/Snake Oil Engine Files (CRITICAL)/clownrace_example_project.naga",
@@ -821,7 +852,6 @@
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/printf-..-(printf).sublime-snippet",
 		"/C/Users/Albert/AppData/Local/Twine/Downloads/Moon Room.html",
 		"/C/Users/Albert/GFX/bin/main.i",
-		"/C/Dev/dev.bat",
 		"/C/Users/Albert/GFX/bin/basic.gl_asm",
 		"/C/Users/Albert/GFX/bin/win32_main.i",
 		"/C/Users/Albert/GFX/bin/shd.i",
@@ -849,28 +879,7 @@
 		"/C/Users/Albert/Tear/tear.cpp",
 		"/C/Users/Albert/Downloads/GraphicsSamples-master/samples/es2-aurora/Bloom/Bloom.cpp",
 		"/C/Users/Albert/Downloads/e255_package/READ_ME.txt",
-		"/C/Users/Albert/Killbox/Builds/killbox_Data/output_log.txt",
-		"/C/Users/Albert/Dolly/dolly_engine.txt",
-		"/C/Users/Albert/Tear/tear.txt",
-		"/C/Users/Albert/GFX/src/wglext.h",
-		"/C/Users/Albert/GFX/src/glext.h",
-		"/C/Users/Albert/GFX_/src/sys.hpp",
-		"/C/Users/Albert/GFX_/src/shd.hpp",
-		"/C/Users/Albert/GFX_/src/glext.h",
-		"/C/Users/Albert/GFX_/src/gl.hpp",
-		"/C/Users/Albert/GFX_/src/gl.cpp",
-		"/C/Users/Albert/Downloads/camera_return.txt",
-		"/C/Users/Albert/GFX_/build.bat",
-		"/C/Users/Albert/GFX/src_/gfx.cpp",
-		"/C/Users/Albert/GFX/src_/win32_main.cpp",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Albert/GFX/src_/stb_truetype.h",
-		"/C/Users/Albert/GFX/src_/shd.hpp",
-		"/C/Users/Albert/Downloads/handmade_hero_326_source/handmade_hero_day_300_source/code/win32_handmade.cpp",
-		"/C/Dev/subl_dev.bat",
-		"/C/Users/Albert/GFX/bin/debug_program.gl_asm",
-		"/C/Users/Albert/GFX/gfx.sublime-project"
+		"/C/Users/Albert/Killbox/Builds/killbox_Data/output_log.txt"
 	],
 	"find":
 	{
@@ -889,6 +898,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"corn_on_the_cob",
+			"burger_chips",
+			"push_food",
+			"bad_color.",
+			"bad_color",
+			"bad_color.r",
+			"bad_color",
+			"kcal_avg",
+			"APP.kcal",
+			"quiche",
+			"shephe",
+			"record_custom(diary, \"peanut_butter_toast\"",
+			"125",
+			"push_food",
+			"record_custom",
+			"push_food",
+			"pad",
+			"padding",
+			"ms_mash",
+			"\t\t\t\t",
+			"burger",
+			"\t\t\t\t",
+			"248",
+			"\t\t\t\t",
+			"248",
+			"noodles",
+			",, ",
+			", ",
 			"\t\t\t\t",
 			"egg_sand",
 			"KG_TO_STONE",
@@ -988,35 +1025,7 @@
 			"record_custom(diary, \"apple_pie\"",
 			"dt",
 			"r_range",
-			"needs_update",
-			"request_animation_frame",
-			".0",
-			"\"apple_pie\", 600.0);",
-			"600.0",
-			", false",
-			"0.5",
-			"color.",
-			"good_color",
-			"color",
-			"canvas",
-			" = { kcal:",
-			"foods.",
-			"push_food(",
-			"good",
-			"waffles",
-			"push_record",
-			"width * r_aspect",
-			"position",
-			"Position",
-			"position",
-			"record_intake",
-			"record_food",
-			"add_food",
-			"foods",
-			"id",
-			"foods",
-			"food",
-			"food_list"
+			"needs_update"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1043,15 +1052,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 35574,
+						"buffer_size": 42647,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30993,
-								30993
+								38022,
+								38022
 							]
 						],
 						"settings":
@@ -1060,10 +1069,39 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 10342.0,
+						"translation.y": 13098.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1147,
+								1147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1122,6 +1160,14 @@
 		"selected_items":
 		[
 			[
+				"",
+				"__mass\\index.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
 				"bu",
 				"__gif\\build.bat"
 			],
@@ -1130,15 +1176,7 @@
 				"__mass\\index.html"
 			],
 			[
-				"",
-				"__mass\\index.html"
-			],
-			[
 				"mass",
-				"__mass\\index.html"
-			],
-			[
-				"inde",
 				"__mass\\index.html"
 			],
 			[
@@ -1639,23 +1677,27 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "gfx",
+		"last_filter": "koko",
 		"selected_items":
 		[
-			[
-				"gfx",
-				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
-			],
-			[
-				"jell",
-				"C:\\Users\\Albert\\Jelly\\repo\\jelly.sublime-project"
-			],
 			[
 				"koko",
 				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
-				"",
+				"ni",
+				"C:\\Users\\Albert\\Ni\\repo\\ni.sublime-project"
+			],
+			[
+				"gfx",
+				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+			],
+			[
+				"alber",
+				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+			],
+			[
+				"killbox",
 				"C:\\Users\\Albert\\Killbox\\killbox.sublime-project"
 			],
 			[
@@ -1663,12 +1705,16 @@
 				"C:\\Users\\Albert\\Killbox\\killbox.sublime-project"
 			],
 			[
-				"ndk",
-				"C:\\Users\\Albert\\NDK\\ndk.sublime-project"
+				"jell",
+				"C:\\Users\\Albert\\Jelly\\repo\\jelly.sublime-project"
 			],
 			[
-				"alber",
-				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+				"",
+				"C:\\Users\\Albert\\Killbox\\killbox.sublime-project"
+			],
+			[
+				"ndk",
+				"C:\\Users\\Albert\\NDK\\ndk.sublime-project"
 			],
 			[
 				"je",
@@ -1745,10 +1791,6 @@
 			[
 				"players",
 				"C:\\Users\\Albert\\Players\\players.sublime-project"
-			],
-			[
-				"killbox",
-				"C:\\Users\\Albert\\Killbox\\killbox.sublime-project"
 			],
 			[
 				"prac",
