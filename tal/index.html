@@ -34,14 +34,11 @@
 				return button;
 			};
 
-			function make_textbox(parent_div, id, value, caption, caption_width) {
-				if(caption !== undefined) {
+			function make_textbox(parent_div, id, value, caption, width) {
+				if(caption !== undefined && caption.length > 0) {
 					var label = document.createElement("div");
 					label.innerHTML = caption;
-					if(caption_width === undefined) {
-						caption_width = FORM_LABEL_WIDTH;
-					}
-					label.style = "display: inline-block; width: " + caption_width + "px;";
+					label.style = "display: inline-block; width: " + FORM_LABEL_WIDTH + "px;";
 					parent_div.appendChild(label);
 				}
 
@@ -49,7 +46,10 @@
 				textbox.setAttribute("type", "text");
 				textbox.id = id;
 				textbox.setAttribute("value", value);
-				textbox.style = "display: inline-block; margin-bottom: 2px; width: " + FORM_FIELD_WIDTH + "px;";
+				if(width === undefined) {
+					width = FORM_FIELD_WIDTH;
+				}
+				textbox.style = "display: inline-block; margin-bottom: 2px; width: " + width + "px;";
 				parent_div.appendChild(textbox);
 
 				return textbox;
@@ -180,9 +180,9 @@
 				make_line_break(form_div);
 
 				form_div.innerHTML += "<div style='display: inline-block;'>User key: </div><div style='display: inline-block; width: 5px;'></div>";
-				make_textbox(form_div, "user_key", "");
+				make_textbox(form_div, "user_key", "", "", 170);
 				form_div.innerHTML += "<div style='display: inline-block; width: 5px;'>";
-				make_button(form_div, "open_button", "Open project", "open_user_project()");
+				make_button(form_div, "open_button", "Open", "open_user_project()");
 				make_line_break(form_div);
 				make_line_break(form_div);
 
