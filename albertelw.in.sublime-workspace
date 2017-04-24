@@ -4,15 +4,99 @@
 		"selected_items":
 		[
 			[
+				"reco",
+				"record_custom"
+			],
+			[
+				"ms_",
+				"ms_pecan_cookie"
+			],
+			[
+				"pecan",
+				"ms_pecan_cookie"
+			],
+			[
+				"lemon",
+				"lemonade"
+			],
+			[
+				"burger",
+				"burger_chips"
+			],
+			[
 				"recor",
-				"record_food"
+				"record_custom"
+			],
+			[
+				"lm",
+				"limonata"
 			],
 			[
 				"record",
 				"record_custom"
 			],
 			[
-				"reco",
+				"reocr",
+				"record_food"
+			],
+			[
+				"rco",
+				"record_custom"
+			],
+			[
+				"lmo",
+				"lemon_flapjack"
+			],
+			[
+				"reoc",
+				"record_custom"
+			],
+			[
+				"che",
+				"cheese_oatcake"
+			],
+			[
+				"reo",
+				"record_food"
+			],
+			[
+				"buter",
+				"butter_bread"
+			],
+			[
+				"len",
+				"lentil_soup"
+			],
+			[
+				"butter",
+				"butter_bread"
+			],
+			[
+				"pest",
+				"pesto_pasta"
+			],
+			[
+				"mor",
+				"mozzarella_balls"
+			],
+			[
+				"peau",
+				"peanut_butter_toast"
+			],
+			[
+				"re",
+				"record_food"
+			],
+			[
+				"KO",
+				"KG_TO_STONE"
+			],
+			[
+				"whit",
+				"whittard_hot_choc"
+			],
+			[
+				"rec",
 				"record_food"
 			],
 			[
@@ -20,48 +104,20 @@
 				"KG_TO_STONE"
 			],
 			[
-				"reoc",
-				"record_custom"
-			],
-			[
-				"rec",
-				"record_food"
-			],
-			[
 				"dash_",
 				"dash_y"
-			],
-			[
-				"reocr",
-				"record_custom"
 			],
 			[
 				"sua",
 				"sausage_roll"
 			],
 			[
-				"re",
-				"record_food"
-			],
-			[
-				"butter",
-				"buttered_bread"
-			],
-			[
 				"fala",
 				"falafel_wrap"
 			],
 			[
-				"lemon",
-				"lemon_flapjack"
-			],
-			[
 				"record_",
 				"record_food"
-			],
-			[
-				"buter",
-				"buttered_bread"
 			],
 			[
 				"egg",
@@ -74,10 +130,6 @@
 			[
 				"peanut_bu",
 				"peanut_butter_toast"
-			],
-			[
-				"reo",
-				"record_food"
 			],
 			[
 				"buttered",
@@ -102,10 +154,6 @@
 			[
 				"qu",
 				"quorn_sausage"
-			],
-			[
-				"ms_",
-				"ms_samosa"
 			],
 			[
 				"poached",
@@ -466,54 +514,6 @@
 			[
 				"Defo",
 				"DeformProgram_X"
-			],
-			[
-				"tex_coo",
-				"tex_coord2"
-			],
-			[
-				"VA_ARGO",
-				"VA_ARG_COUNT_"
-			],
-			[
-				"VA_ARG",
-				"VA_ARG_COUNT"
-			],
-			[
-				"TESS_",
-				"TESS_TCS"
-			],
-			[
-				"SHADER_AR",
-				"SHADER_ARRAY1"
-			],
-			[
-				"SHADER",
-				"SHADER_ARRAY1"
-			],
-			[
-				"TEO",
-				"TOKEN_CONCAT"
-			],
-			[
-				"VA_",
-				"VA_FUNC"
-			],
-			[
-				"VA",
-				"VA_ARG_COUNT_"
-			],
-			[
-				"EXP",
-				"EXPAND"
-			],
-			[
-				"EXPAN",
-				"EXPAND2"
-			],
-			[
-				"sbu",
-				"subdiv_step"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 42647,
+				"buffer_size": 62062,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -752,6 +752,43 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/Bai/Assets/GameBehaviour.cs",
+		"/C/Users/Albert/Downloads/Grimm Tales_ For Young and Old - Philip Pullman/OPS/styles/stylesheet.css",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_20_34_48.vb",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_12_35_32.vb",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_17_45_59.vb",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_22_41_32.vb",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_22_38_17.vb",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_22_24_04.vb",
+		"/C/Users/Albert/albertelw.in/__mass/index.html",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_22_04_45.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_22_04_07.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_21_30_06.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_21_29_19.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_21_27_45.txt",
+		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_00_19_43.txt",
+		"/C/Fraps/Movies/avi_to_gif.bat",
+		"/C/Users/Albert/Manifold5.5/Assets/PortalManager.cs",
+		"/C/Users/Albert/Manifold5.5/Assets/PortalView.cs",
+		"/C/Users/Albert/Manifold5.5/Assets/Standard Assets/Effects/ImageEffects/Shaders/EdgeDetectNormals.shader",
+		"/C/Users/Albert/Manifold5.5/Assets/Materials/EdgeDetectNormalsStencil.shader",
+		"/C/Users/Albert/Manifold5.5/Assets/Standard",
+		"/C/Users/Albert/Manifold5.5/Assets/Effects/ImageEffects/Shaders/EdgeDetectNormals.shader",
+		"/C/Users/Albert/Manifold5.5/Assets/Editor/ImageEffects/ColorCorrectionLookupEditor.cs",
+		"/C/Users/Albert/Manifold5.5/Build/manifold_Data/output_log.txt",
+		"/C/Users/Albert/Manifold/Assets/Standard",
+		"/C/Users/Albert/Manifold/Assets/Effects/ImageEffects/Scripts/EdgeDetection.cs",
+		"/C/Users/Albert/Manifold/Assets/StencilViewer.cs",
+		"/C/Users/Albert/Manifold/Assets/PortalManager.cs",
+		"/C/Users/Albert/Manifold/Assets/PortalCam.cs",
+		"/C/Users/Albert/Manifold/Assets/StencilShaders/Masks/StencilMask_1.shader",
+		"/C/Users/Albert/Manifold/Assets/Materials/StdSecondStencil.shader",
+		"/C/Users/Albert/Manifold/Assets/Materials/StdStencil.shader",
+		"/C/Users/Albert/Manifold/Bosca.txt",
+		"/C/Users/Albert/Garden/Assets/Scripts/GameBehaviour.cs",
+		"/C/Users/Albert/Garden/Assets/gmcs.rsp",
+		"/C/Users/Albert/Garden/Assets/mcs.rsp",
+		"/C/Users/Albert/Garden/Assets/Scripts/unity.rsp",
 		"/C/Users/Albert/GFX/dat/horse_ascii.fbx",
 		"/C/Users/Albert/GFX/dat/fbx_ascii.fbx",
 		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_10_55_40.txt",
@@ -786,7 +823,6 @@
 		"/C/Users/Albert/albertelw.in/__gif/build.bat",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Content/UIResources/js/coherent.js",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Content/UIResources/Main.html",
-		"/C/Users/Albert/albertelw.in/__mass/index.html",
 		"/C/Users/Albert/Crackdown/FrontEndTestbed/FrontEnd/Source/FrontEnd/Public/Engine/FEGameMode.h",
 		"/C/Users/Albert/Authority/todo.txt",
 		"/C/Users/Albert/Downloads/unspecified",
@@ -807,7 +843,6 @@
 		"/C/Users/Albert/albertelw.in/__gif/sys.hpp",
 		"/C/Users/Albert/Gif/build.bat",
 		"/C/Users/Albert/Gif/main.cpp",
-		"/C/Fraps/Movies/avi_to_gif.bat",
 		"/C/Users/Albert/Killbox/Raw/ogv.bat",
 		"/C/Users/Albert/Gif/_vid.bat",
 		"/C/Users/Albert/GFX/src/main.cpp",
@@ -844,42 +879,7 @@
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C.sublime-syntax",
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.sublime-settings",
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.sublime-syntax",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.tmLanguage",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/User/Albert.tmTheme",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/User/C++.sublime-settings",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/Symbol Index Include Constants.tmPreferences",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/Indentation Rules.tmPreferences",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/printf-..-(printf).sublime-snippet",
-		"/C/Users/Albert/AppData/Local/Twine/Downloads/Moon Room.html",
-		"/C/Users/Albert/GFX/bin/main.i",
-		"/C/Users/Albert/GFX/bin/basic.gl_asm",
-		"/C/Users/Albert/GFX/bin/win32_main.i",
-		"/C/Users/Albert/GFX/bin/shd.i",
-		"/C/Users/Albert/GFX/src/demo.hpp",
-		"/C/Users/Albert/Tear/build.bat",
-		"/C/Users/Albert/GFX/bin/basic_program.gl_asm",
-		"/C/Users/Albert/Documents/Arduino/bare_sketch/bare_sketch.ino",
-		"/C/Users/Albert/Downloads/com.htc.calendar/com/htc/calendar/am.java",
-		"/C/Users/Albert/Downloads/com.htc.calendar/com/sothree/slidinguppanel/ViewDragHelper.java",
-		"/C/Users/Albert/Downloads/com.htc.calendar/com/sothree/slidinguppanel/SlidingUpPanelLayout.java",
-		"/C/Dev/dev_start.bat",
-		"/C/Users/Albert/Downloads/com.google.android.calendar/android/support/v7/appcompat/C0126R.java",
-		"/C/Users/Albert/Downloads/com.google.android.calendar/android/support/v7/app/AlertController.java",
-		"/C/Users/Albert/Downloads/apples.js",
-		"/C/Users/Albert/Dropbox/Public/tmp.txt",
-		"/C/Users/Albert/Spliot/Assets/GameManager.cs",
-		"/C/Users/Albert/Emulators/SNES/Valid.Ext",
-		"/C/Users/Albert/Emulators/PS1/Games/Gran Turismo 2 (Simulation Mode) (v1.2).cue",
-		"/C/Users/Albert/Spliot/Assets/Unlit.shader",
-		"/C/Users/Albert/Downloads/WinVICE-2.4-x64/README",
-		"/C/Users/Albert/Downloads/WinVICE-2.4-x64/C64/win_pos.vkm",
-		"/C/Users/Albert/Downloads/ray_tri.cpp",
-		"/C/Users/Albert/Downloads/Retro/5200/readme.txt",
-		"/C/Users/Albert/Downloads/lights_proposal.txt",
-		"/C/Users/Albert/Tear/tear.cpp",
-		"/C/Users/Albert/Downloads/GraphicsSamples-master/samples/es2-aurora/Bloom/Bloom.cpp",
-		"/C/Users/Albert/Downloads/e255_package/READ_ME.txt",
-		"/C/Users/Albert/Killbox/Builds/killbox_Data/output_log.txt"
+		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.tmLanguage"
 	],
 	"find":
 	{
@@ -898,6 +898,48 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"potato",
+			"baked_pot",
+			"record_food(diary",
+			"tiger_roll",
+			"\t\t\t\t",
+			"crisps",
+			"lemon_flapjack",
+			"oatcake",
+			"\t\t\t\t",
+			"attach.",
+			"combo_box",
+			"foods",
+			"homemade_quiche",
+			"quiche",
+			"ginger_beer",
+			"burger_chips",
+			"0.25",
+			"0.125",
+			"begin_day",
+			"diary.date",
+			"begin_day",
+			"diarym",
+			"\t\t\t\t",
+			"(",
+			"record_food",
+			"\t\t\t\t",
+			"\t\t\t\t//",
+			"\t\t\t\t",
+			"Password",
+			"mac_cheese",
+			"ginger_beer",
+			"quiche",
+			"animation_frame",
+			"OldTech",
+			"CustomPostRender",
+			"OtherCam",
+			"lemonade",
+			"mac",
+			"mac_cheese",
+			"mac",
+			"\t\t\t\trecord_food(diary, foods.apple);\n\t\t\t\trecord_food(diary, foods.peanut_butter_toast, 2);\n",
+			"kcal_streak",
 			"corn_on_the_cob",
 			"burger_chips",
 			"push_food",
@@ -983,49 +1025,7 @@
 			"begin_day(diary, 77.47358);",
 			"poached_egg",
 			");\n",
-			"record_custom",
-			" )",
-			"pecan_cookie",
-			"\t\t\t\t//",
-			");\n",
-			"record_cusomt",
-			"\t\t\t\t",
-			"nbsp",
-			"push_food",
-			".good",
-			"record_custom(",
-			");",
-			"record_food",
-			", false",
-			"current_date",
-			"date",
-			"getUTCMonth",
-			"kcal_avg",
-			"weight",
-			"BMR",
-			"bmr",
-			"poached_egg",
-			"ms_samosa",
-			"apple_pie",
-			"foods.samosa",
-			"lentil_soup",
-			"r_aspect",
-			"width =",
-			"v_buf",
-			"utc_day",
-			"diary",
-			"·",
-			"weight",
-			"begin_day",
-			"window.innerHeight",
-			"canvas.width =",
-			"fried_egg",
-			", 0.0);",
-			"0",
-			"record_custom(diary, \"apple_pie\"",
-			"dt",
-			"r_range",
-			"needs_update"
+			"record_custom"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1052,15 +1052,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 42647,
+						"buffer_size": 62062,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								38022,
-								38022
+								57372,
+								57372
 							]
 						],
 						"settings":
@@ -1069,7 +1069,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13098.0,
+						"translation.y": 7915.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1160,8 +1160,12 @@
 		"selected_items":
 		[
 			[
-				"",
+				"mass",
 				"__mass\\index.html"
+			],
+			[
+				"",
+				"C:\\Users\\Albert\\Manifold5.5\\Assets\\Standard Assets\\Effects\\ImageEffects\\Shaders\\EdgeDetectNormals.shader"
 			],
 			[
 				"inde",
@@ -1173,10 +1177,6 @@
 			],
 			[
 				"mas",
-				"__mass\\index.html"
-			],
-			[
-				"mass",
 				"__mass\\index.html"
 			],
 			[
@@ -1677,24 +1677,68 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "koko",
+		"last_filter": "taru",
 		"selected_items":
 		[
 			[
-				"koko",
-				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
+				"taru",
+				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
 			],
 			[
-				"ni",
-				"C:\\Users\\Albert\\Ni\\repo\\ni.sublime-project"
+				"",
+				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
+			],
+			[
+				"alber",
+				"C:\\Users\\Albert\\Bai\\bai.sublime-project"
+			],
+			[
+				"mani",
+				"C:\\Users\\Albert\\Manifold\\manifold.sublime-project"
+			],
+			[
+				"ta",
+				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
+			],
+			[
+				"zenith",
+				"C:\\Users\\Albert\\Zenith\\zenith.sublime-project"
+			],
+			[
+				"tar",
+				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
+			],
+			[
+				"zeni",
+				"C:\\Users\\Albert\\Zenith\\zenith.sublime-project"
 			],
 			[
 				"gfx",
 				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
 			],
 			[
-				"alber",
-				"C:\\Users\\Albert\\GFX\\gfx.sublime-project"
+				"ma",
+				"C:\\Users\\Albert\\Manifold\\manifold.sublime-project"
+			],
+			[
+				"man",
+				"C:\\Users\\Albert\\Manifold\\manifold.sublime-project"
+			],
+			[
+				"garden",
+				"C:\\Users\\Albert\\Garden\\garden.sublime-project"
+			],
+			[
+				"garde",
+				"C:\\Users\\Albert\\Garden\\garden.sublime-project"
+			],
+			[
+				"ni",
+				"C:\\Users\\Albert\\Ni\\repo\\ni.sublime-project"
+			],
+			[
+				"koko",
+				"C:\\Users\\Albert\\Koko\\repo\\koko.sublime-project"
 			],
 			[
 				"killbox",
@@ -1707,10 +1751,6 @@
 			[
 				"jell",
 				"C:\\Users\\Albert\\Jelly\\repo\\jelly.sublime-project"
-			],
-			[
-				"",
-				"C:\\Users\\Albert\\Killbox\\killbox.sublime-project"
 			],
 			[
 				"ndk",
