@@ -263,7 +263,6 @@ function db_save_project(project, callback) {
 			var database_ref = firebase.database().ref();
 			var project_ref = database_ref.child("projects/" + project.key);
 
-			//TODO: Verify project before saving!!
 			if(project.rev < 0) {
 				project_ref.child("name").set(project.name);
 				project_ref.child("rev_count").set(1);

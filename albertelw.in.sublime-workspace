@@ -523,7 +523,7 @@
 			"file": "__mass/index.html",
 			"settings":
 			{
-				"buffer_size": 62062,
+				"buffer_size": 62287,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1052,15 +1052,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 62062,
+						"buffer_size": 62287,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57372,
-								57372
+								51044,
+								51044
 							]
 						],
 						"settings":
@@ -1069,7 +1069,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7915.0,
+						"translation.y": 17639.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1677,9 +1677,17 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "taru",
+		"last_filter": "zenith",
 		"selected_items":
 		[
+			[
+				"zenith",
+				"C:\\Users\\Albert\\Zenith\\zenith.sublime-project"
+			],
+			[
+				"tar",
+				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
+			],
 			[
 				"taru",
 				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
@@ -1698,14 +1706,6 @@
 			],
 			[
 				"ta",
-				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
-			],
-			[
-				"zenith",
-				"C:\\Users\\Albert\\Zenith\\zenith.sublime-project"
-			],
-			[
-				"tar",
 				"C:\\Users\\Albert\\Taru\\taru.sublime-project"
 			],
 			[
