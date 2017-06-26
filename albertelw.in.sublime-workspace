@@ -752,6 +752,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/AppData/Local/Temp/Temp1_of_v0.9.8_vs_release.zip/of_v0.9.8_vs_release/addons/ofxEmscripten/src/ofxEmscriptenURLFileLoader.cpp",
+		"/C/Users/Albert/AppData/Local/Temp/Temp1_of_v0.9.8_vs_release.zip/of_v0.9.8_vs_release/addons/ofxEmscripten/src/ofxAppEmscriptenWindow.cpp",
 		"/C/Users/Albert/Bai/Assets/GameBehaviour.cs",
 		"/C/Users/Albert/Downloads/Grimm Tales_ For Young and Old - Philip Pullman/OPS/styles/stylesheet.css",
 		"/C/Users/Albert/AppData/Local/Temp/TextEditorAnywhere_20_34_48.vb",
@@ -877,9 +879,7 @@
 		"/C/Fraps/Movies/_vid.bat",
 		"/C/Users/Albert/Map/index.html",
 		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C.sublime-syntax",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.sublime-settings",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.sublime-syntax",
-		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.tmLanguage"
+		"/C/Users/Albert/AppData/Roaming/Sublime Text 3/Packages/C++/C++.sublime-settings"
 	],
 	"find":
 	{
@@ -1059,7 +1059,7 @@
 						"selection":
 						[
 							[
-								51044,
+								51092,
 								51044
 							]
 						],
