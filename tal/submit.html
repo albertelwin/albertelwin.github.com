@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tal Registry</title>
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.smoothState.min.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="db.js"></script>
+		<script>
+			var project = db_get_session_project();
+			if(project !== null) {
+				db_save_project(project, function(project, err) {
+					if(err !== null) {
+						errorMsg(err);
+					}
+				});
+				document.addEventListener("DOMContentLoaded", function() {
+					var next_btn = document.getElementById("next_btn");
+					next_btn.click_func = function() {
+						db_set_session_project(project, next_btn.href);
+						return true;
+					}
+				});
+			}
+
+			$(document).ready(function () {
+				$('.js-final').css({display: 'none'});
+				$('.js-abitlater').css({opacity: '0'});
+				$('.congrats-screen').css({backgroundSize: '9em'});
+				$('.congrats-wrapper').css({paddingTop: '1.5em'});
+				$('.congrats-smile').css({
+					width: '5em',
+					height: '5em',
+					opacity: '0'
+				});
+
+				setTimeout(carryOn, 3000);
+			});
+
+			function carryOn() {
+				var delay = 300;
+
+				// Remove loading page
+				$('.js-initial').fadeOut(delay);
+				setTimeout(displayCongrats, delay);
+
+				function displayCongrats() {
+					$('.js-final').fadeIn(delay, function() {
+						$('.js-abitlater').animate({
+							opacity: '1'
+						});
+					});
+					$('.congrats-smile').animate({
+							width: '8em',
+							height: '8em',
+							opacity: '1'
+						}, 50, 'linear');
+					$('.congrats-wrapper').animate({
+							paddingTop: '0'
+						}, 50, 'linear', function() {
+							$('.congrats-smile').animate({
+									width: '7em',
+									height: '7em'
+								}, 200);
+							$('.congrats-wrapper').animate({
+									paddingTop: '.5em'
+								}, 200, function() {
+									console.log('fini!');
+								});
+						});
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<header id="site-header">
+			<div class="wrapper">
+				<a href="index.html" class="link-home">Home</a>
+				<span class="site-title">Tal Registry</span>
+			</div>
+		</header>
+		<div class="loading-screen js-initial"></div>
+		<div class="congrats-wrapper">
+			<img src="style/images/smile.png" class="congrats-smile">
+		</div>
+		<div id="content" class="animated animated--fadein">
+			<div class="wrapper">
+				<h1 class="page-title js-initial">Setting up project</h1>
+
+				<div class="congrats-screen js-final">
+					<p class="page-explanations js-abitlater" style="padding-top: 3em;">Congratulations!<br>Your project has been setup.</p>
+					<div class="js-abitlater" style="position: absolute; bottom: 1em; left: 0; right: 0;">
+						<a id="next_btn" href="tals_overview.html" class="btn-round btn-check">
+							<span class="btn-content">Go to Project Overview</span>
+						</a>
+						<div class="label-btn">Go to Project Overview</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

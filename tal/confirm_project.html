@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tal Registry</title>
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.smoothState.min.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="db.js"></script>
+		<script>
+			var project = db_get_session_project();
+			if(project !== null) {
+				document.addEventListener("DOMContentLoaded", function() {
+					var name_elem = document.getElementById("project_name");
+					name_elem.innerHTML = project.name;
+
+					var project_desc = document.getElementById("project_desc");
+					project_desc.innerHTML = project.description;
+
+					var next_btn = document.getElementById("next_btn");
+					next_btn.click_func = function() {
+						var result = true;
+						db_set_session_project(project, next_btn.href);
+						return result;
+					};
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header id="site-header">
+			<div class="wrapper">
+				<a href="index.html" class="link-home">Home</a>
+				<span class="site-title">Tal Registry</span>
+			</div>
+		</header>
+		<div id="content" class="animated animated--fadein">
+			<div class="wrapper">
+				<form>
+					<div class="content-fixedheight">
+						<h1 class="page-title">Confirm project</h1>
+						<h2 id="project_name" class="project-title">Project name</h2>
+						<p id="project_desc">Project description</p>
+						<a href="make_project.html" class="help-link help-link-left">wrong project?</a>
+						<br>
+					</div>
+				</form>
+				<a id="next_btn" class="btn-round btn-plus" href="create_team.html">
+					<span class="btn-content">Create your team</span>
+				</a>
+				<div class="label-btn">Create your team</div>
+			</div>
+		</div>
+		<ul class="wizard">
+			<li><span class="wizard--step wizard--active-step">Project</span></li>
+			<li><span class="wizard--step">Team</span></li>
+			<li><span class="wizard--step">Tals</span></li>
+			<li><span class="wizard--step">Review and Submit</span></li>
+		</ul>
+	</body>
+</html>

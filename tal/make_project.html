@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tal Registry</title>
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.smoothState.min.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="db.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				var next_btn = document.getElementById("next_btn");
+				next_btn.click_func = function() {
+					var key_elem = document.getElementById("project_key");
+					var project_key = key_elem.value.trim();
+					var email_elem = document.getElementById("project_email");
+					var project_email = email_elem.value.trim();
+
+					if(project_key.length === 0) {
+						errorMsg("Please enter a project code.");
+					}
+					else if(project_email.length === 0) {
+						errorMsg("Please enter a project email.");
+					}
+					else {
+						db_get_project(project_key, function(project) {
+							if(project !== null && project.email === project_email) {
+								var href = next_btn.formAction;
+								db_set_session_project(project, href);
+								window.location.href = href;
+							}
+							else {
+								errorMsg("Project code/email combination does not match any existing project.");
+							}
+						});
+					}
+
+					return false;
+				};
+			});
+		</script>
+	</head>
+	<body>
+		<header id="site-header">
+			<div class="wrapper">
+				<a href="index.html" class="link-home">Home</a>
+				<span class="site-title">Tal Registry</span>
+			</div>
+		</header>
+		<div id="content" class="animated animated--fadein">
+			<div class="wrapper">
+				<form action="confirm_project.html">
+					<div class="content-fixedheight">
+						<h1 class="page-title">Create Project</h1>
+						<p class="page-explanations">If we have sent your unique project code, please enter it here with the project email address</p>
+						<label for="project_key" class="sr-only">Your project code</label>
+						<input id="project_key" type="text" name="project_key" placeholder="Enter project code here">
+
+						<label for="project_email" class="sr-only">Your project email</label>
+						<input id="project_email" type="email" name="project_email" placeholder="Enter project email here">
+						<a href="faq.html#cant-find-code" class="help-link help-link-left">can't find your code?</a>
+					</div>
+					<button id="next_btn" class="btn-round btn-check" type="submit" formaction="confirm_project.html"><span class="btn-content">Confim your project</span></button>
+					<div class="label-btn">Confirm your project</div>
+				</form>
+			</div>
+		</div>
+		<ul class="wizard">
+			<li><span class="wizard--step wizard--active-step">Project</span></li>
+			<li><span class="wizard--step">Team</span></li>
+			<li><span class="wizard--step">Tals</span></li>
+			<li><span class="wizard--step">Review and Submit</span></li>
+		</ul>
+	</body>
+</html>

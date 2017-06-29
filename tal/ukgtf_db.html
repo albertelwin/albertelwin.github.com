@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Taru</title>
+
+		<script src="db.js"></script>
+		<script>
+			var FORM_LABEL_WIDTH = 130;
+			var FORM_FIELD_WIDTH = 240;
+
+			function make_line_break(parent_div) {
+				parent_div.innerHTML += "<br>";
+			};
+
+			function make_button(parent_div, id, caption, on_click, width) {
+				var button = document.createElement("button");
+				button.id = id;
+				button.innerHTML = caption;
+				if(width !== undefined) {
+					button.style.width = width;
+				}
+				var padding = "2px";
+				button.style.marginBottom = padding;
+				button.style.marginRight = padding;
+				button.style.height = "28px";
+				if(on_click !== undefined) {
+					button.setAttribute("onclick", on_click);
+				}
+				parent_div.appendChild(button);
+
+				return button;
+			};
+
+			function make_textbox(parent_div, id, value, caption, width) {
+				if(caption !== undefined && caption.length > 0) {
+					var label = document.createElement("div");
+					label.innerHTML = caption;
+					label.style = "display: inline-block; width: " + FORM_LABEL_WIDTH + "px;";
+					parent_div.appendChild(label);
+				}
+
+				var textbox = document.createElement("input");
+				textbox.setAttribute("type", "text");
+				textbox.id = id;
+				textbox.setAttribute("value", value);
+				if(width === undefined) {
+					width = FORM_FIELD_WIDTH;
+				}
+				textbox.style = "display: inline-block; margin-bottom: 2px; width: " + width + "px;";
+				parent_div.appendChild(textbox);
+
+				return textbox;
+			};
+
+			function make_dropdown_option(dropdown, caption, value) {
+				var option = document.createElement("option");
+				dropdown.appendChild(option);
+				option.innerHTML = caption;
+				option.setAttribute("value", value);
+				return option;
+			};
+
+			function make_dropdown(parent_div, id, caption, option_list, value) {
+				var label = document.createElement("div");
+				label.innerHTML = caption;
+				label.style = "display: inline-block; width: " + FORM_LABEL_WIDTH + "px;";
+				parent_div.appendChild(label);
+
+				var dropdown = document.createElement("select");
+				dropdown.id = id;
+				dropdown.style = "display: inline-block; margin-bottom: 2px; width: " + (FORM_FIELD_WIDTH + 4) + "px;";
+				var selected_option = make_dropdown_option(dropdown, "", "");
+				for(var i = 0; i < option_list.length; i++) {
+					var option_val = option_list[i];
+					var option = make_dropdown_option(dropdown, option_val.caption, option_val.value);
+					if(option_val.value === value) {
+						selected_option = option;
+					}
+				}
+				selected_option.setAttributeNode(document.createAttribute("selected"));
+				parent_div.appendChild(dropdown);
+
+				return dropdown;
+			};
+
+			function make_user(parent_div, user, insert_front) {
+				var parent_html = "";
+				if(insert_front === true) {
+					parent_html = parent_div.innerHTML;
+					parent_div.innerHTML = "";
+				}
+
+				var user_label = document.createElement("div");
+				user_label.style = "font-weight: bold;";
+				parent_div.appendChild(user_label);
+				user_label.innerHTML = user.key.length > 0 ? user.key : "New User";
+
+				make_textbox(parent_div, user.uid + "_name", user.name, "Name:");
+				make_line_break(parent_div);
+				make_textbox(parent_div, user.uid + "_email", user.email, "Email:");
+				make_line_break(parent_div);
+				make_dropdown(parent_div, user.uid + "_type", "Type:", DB_USER_TYPE_LIST, user.type);
+				make_line_break(parent_div);
+				make_textbox(parent_div, user.uid + "_silver_tals", user.silver_tals, "Silver tals:");
+				make_line_break(parent_div);
+				make_textbox(parent_div, user.uid + "_copper_tals", user.copper_tals, "Copper tals:");
+				make_line_break(parent_div);
+				make_textbox(parent_div, user.uid + "_sodium_tals", user.sodium_tals, "Sodium tals:");
+				make_line_break(parent_div);
+
+				make_line_break(parent_div);
+
+				parent_div.innerHTML += parent_html;
+			};
+
+			function add_user() {
+				var form_div = document.getElementById("form");
+				var project = form_div.__project;
+
+				for(var i = 0; i < project.users.length; i++) {
+					var user = project.users[i];
+					user.name = document.getElementById(user.uid + "_name").value;
+					user.email = document.getElementById(user.uid + "_email").value;
+					user.type = document.getElementById(user.uid + "_type").value;
+					user.silver_tals = document.getElementById(user.uid + "_silver_tals").value;
+					user.copper_tals = document.getElementById(user.uid + "_copper_tals").value;
+					user.sodium_tals = document.getElementById(user.uid + "_sodium_tals").value;
+				}
+
+				var user = db_add_project_user(project, "", "", DB_USER_DEFAULT_TYPE, 0, 0, 0);
+
+				var users_div = document.getElementById("users");
+				make_user(users_div, user, true);
+
+				document.getElementById(user.uid + "_name").focus();
+
+				for(var i = 0; i < project.users.length; i++) {
+					var user = project.users[i];
+					document.getElementById(user.uid + "_name").value = user.name;
+					document.getElementById(user.uid + "_email").value = user.email;
+					document.getElementById(user.uid + "_type").value = user.type;
+					document.getElementById(user.uid + "_silver_tals").value = user.silver_tals;
+					document.getElementById(user.uid + "_copper_tals").value = user.copper_tals;
+					document.getElementById(user.uid + "_sodium_tals").value = user.sodium_tals;
+				}
+			};
+
+			function add_project() {
+				var project = db_create_project("");
+				open_project(project);
+			};
+
+			function open_user_project() {
+				var user_key_elem = document.getElementById("user_key");
+				var user_key = user_key_elem.value;
+				if(user_key !== undefined && user_key !== null) {
+					user_key = user_key.trim();
+				}
+				else {
+					user_key = "";
+				}
+				user_key_elem.value = user_key;
+
+				db_user_to_project_key(user_key, function(project_key) {
+					if(project_key !== null) {
+						open_project_by_key(project_key);
+					}
+				});
+			};
+
+			function open_projects() {
+				var form_div = document.getElementById("form");
+				form_div.innerHTML = "";
+
+				form_div.innerHTML += "<h1 style='display: inline-block;'>Projects</h1><div style='display: inline-block; width: 5px;'></div>";
+				make_button(form_div, "add_project", "+", "add_project()");
+				make_line_break(form_div);
+
+				form_div.innerHTML += "<div style='display: inline-block;'>User key: </div><div style='display: inline-block; width: 5px;'></div>";
+				make_textbox(form_div, "user_key", "", "", 170);
+				form_div.innerHTML += "<div style='display: inline-block; width: 5px;'>";
+				make_button(form_div, "open_button", "Open", "open_user_project()");
+				make_line_break(form_div);
+				make_line_break(form_div);
+
+				db_for_each_project(function(project) {
+					// make_button(form_div, "button_" + project.key, project.name + " [" + project.key + "]", "open_project_by_key(\"" + project.key + "\");", "300px");
+					make_button(form_div, "button_" + project.key, project.name, "open_project_by_key(\"" + project.key + "\");", "300px");
+					make_line_break(form_div);
+				});
+			};
+
+			function save_project() {
+				var form_div = document.getElementById("form");
+
+				var project = form_div.__project;
+
+				if(project.rev < 0) {
+					project.name = document.getElementById("project_name").value;
+				}
+				project.description = document.getElementById("project_description").value;
+				project.email = document.getElementById("project_email").value;
+				project.total_silver_tals = document.getElementById("project_total_silver_tals").value | 0;
+				project.total_copper_tals = document.getElementById("project_total_copper_tals").value | 0;
+
+				for(var i = 0; i < project.users.length; i++) {
+					var user = project.users[i];
+					user.name = document.getElementById(user.uid + "_name").value;
+					user.email = document.getElementById(user.uid + "_email").value;
+					user.type = document.getElementById(user.uid + "_type").value;
+					user.silver_tals = document.getElementById(user.uid + "_silver_tals").value | 0;
+					user.copper_tals = document.getElementById(user.uid + "_copper_tals").value | 0;
+					user.sodium_tals = document.getElementById(user.uid + "_sodium_tals").value | 0;
+				}
+
+				var save_button = document.getElementById("save_button");
+				save_button.disabled = true;
+				var cancel_button = document.getElementById("cancel_button");
+				cancel_button.disabled = true;
+
+				db_save_project(project, function(project, error) {
+					if(error === null) {
+						open_projects();
+					}
+					else {
+						alert(error);
+						save_button.disabled = false;
+						cancel_button.disabled = false;
+					}
+				});
+			};
+
+			function open_project(project) {
+				var form_div = document.getElementById("form");
+				form_div.innerHTML = "";
+
+				form_div.__project = project;
+
+				if(project.rev < 0) {
+					form_div.innerHTML += "<h1>New Project</h1>";
+					make_textbox(form_div, "project_name", project.name, "Name:");
+					make_line_break(form_div);
+				}
+				else {
+					form_div.innerHTML += "<h1 style='display: inline-block;'>" + project.name + " [" + project.key + "]" + "</h1>";
+					if(project.rev > 0) {
+						form.innerHTML += "<div style='display: inline-block; width: 5px;'></div><div style='display: inline-block; font-style: italic;'>Revision " + project.rev + "</div>";
+					}
+
+					make_line_break(form_div);
+				}
+
+				make_textbox(form_div, "project_description", project.description, "Description:");
+				make_line_break(form_div);
+				make_textbox(form_div, "project_email", project.email, "Email:");
+				make_line_break(form_div);
+				make_textbox(form_div, "project_total_silver_tals", project.total_silver_tals, "Total silver tals:");
+				make_line_break(form_div);
+				make_textbox(form_div, "project_total_copper_tals", project.total_copper_tals, "Total copper tals:");
+				make_line_break(form_div);
+
+				form_div.innerHTML += "<h2 style='display: inline-block;'>Users</h2><div style='display: inline-block; width: 5px;'>";
+
+				make_button(form_div, "add_user", "+", "add_user()");
+				make_line_break(form_div);
+
+				var users_div = document.createElement("div");
+				form_div.appendChild(users_div);
+				users_div.id = "users";
+				for(var i = 0; i < project.users.length; i++) {
+					make_user(users_div, project.users[i]);
+				}
+
+				make_button(form_div, "save_button", "Save", "save_project();", "100px");
+				make_button(form_div, "cancel_button", "Cancel", "open_projects();", "100px");
+			};
+
+			function open_project_by_key(project_key) {
+				db_get_project(project_key, function(project) {
+					if(project !== null) {
+						open_project(project);
+					}
+				});
+			};
+
+			function build_database() {
+				db_destroy_entire_database();
+
+				var bob = db_create_project("Bob");
+				bob.key = "bob";
+				bob.approved = true;
+				bob.description = "Excepturi beatae sunt repudiandae sed aliquam omnis. Eos et nam sit totam debitis et minima voluptatem. Sunt consequuntur ratione voluptatem incidunt.";
+				bob.email = "bob@bob.com";
+				db_add_project_user(bob, "Bob 1", "bob1@bob.com", "creative_founder", 0, 0, 0).key = "b1";
+				db_add_project_user(bob, "Bob 2", "bob2@bob.com", "creative_founder", 0, 0, 0).key = "b2";
+				db_add_project_user(bob, "Bob 3", "bob3@bob.com", "team_member", 0, 0, 0).key = "b3";
+				db_add_project_user(bob, "Bob 4", "bob4@bob.com", "team_member", 0, 0, 0).key = "b4";
+				db_add_project_user(bob, "Bob 5", "bob5@bob.com", "team_member", 0, 0, 0).key = "b5";
+				db_save_project(bob);
+			};
+
+			document.addEventListener("DOMContentLoaded", function() {
+				// build_database();
+				open_projects();
+			});
+		</script>
+	</head>
+	<body style="font-family: Georgia;">
+		<div id="form"></div>
+	</body>
+</html>

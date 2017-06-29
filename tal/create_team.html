@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tal Registry</title>
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.smoothState.min.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="db.js"></script>
+		<script>
+			var project = db_get_session_project();
+			if(project !== null) {
+				document.addEventListener("DOMContentLoaded", function() {
+					var founder_list = document.getElementById("founder_list");
+
+					for(var i = 0; i < project.users.length; i++) {
+						var user = project.users[i];
+						if(user.__verified === true) {
+							founder_list.innerHTML += "<li>" + user.name + "</li>";
+						}
+					}
+
+					var add_founder = document.getElementById("add_founder");
+					add_founder.click_func = function() {
+						var result = true;
+						var err = null;
+
+						var founder_elem = document.getElementById("founder_key");
+						var founder_check = document.getElementById("founder_check");
+
+						var key = founder_elem.value;
+						if(key.length > 0) {
+							var valid_key = false;
+
+							for(var i = 0; i < project.users.length; i++) {
+								var user = project.users[i];
+								if(user.key === key && user.type !== "inactive_member") {
+									valid_key = true;
+
+									if(user.__verified !== true) {
+										var correct_type = false;
+										if(founder_check.checked) {
+											if(user.type == "creative_founder") {
+												correct_type = true;
+											}
+											else {
+												err = "[" + key + "] is not a creative founder.";
+											}
+										}
+										else {
+											if(user.type === "team_member") {
+												correct_type = true;
+											}
+											else {
+												err = "[" + key + "] is a creative founder.";
+											}
+										}
+
+										if(correct_type) {
+											user.__verified = true;
+
+											member_added = true;
+											founder_list.innerHTML += "<li>" + user.name + "</li>";
+											founder_elem.value = "";
+											founder_check.checked = false;
+
+											wizardPosition();
+										}
+									}
+									else {
+										err = "[" + key + "] has already been added.";
+									}
+
+									break;
+								}
+							}
+
+							if(valid_key === false) {
+								err = "[" + key + "] is an invalid code.";
+							}
+						}
+						else {
+							err = "Please enter a code.";
+						}
+
+						if(err !== null) {
+							errorMsg(err);
+							result = false;
+						}
+
+						return result;
+					};
+
+					var next_btn = document.getElementById("next_btn");
+					next_btn.click_func = function() {
+						var result = true;
+						var err = null;
+
+						for(var i = 0; i < project.users.length; i++) {
+							var user = project.users[i];
+							if(user.type !== "inactive_member" && user.__verified !== true) {
+								err = "All members must be added.";
+								break;
+							}
+						}
+
+						if(err !== null) {
+							errorMsg(err);
+							result = false;
+						}
+						else {
+							db_set_session_project(project, next_btn.href);
+						}
+
+						return result;
+					};
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header id="site-header">
+			<div class="wrapper">
+				<a href="index.html" class="link-home">Home</a>
+				<span class="site-title">Tal Registry</span>
+			</div>
+		</header>
+		<div id="content" class="animated animated--fadein">
+			<div class="wrapper">
+				<form>
+					<div class="content-fixedheight">
+					<h1 class="page-title">Create team</h1>
+					<p class="page-explanations">Build your team by adding creative founder and team member codes</p>
+						<ul id="founder_list" class="add-list"></ul>
+						<label for="founder_key" class="sr-only">Member code</label>
+						<input id="founder_key" type="text" placeholder="Enter member code here">
+						<a href="faq.html#cant-find-code" class="help-link help-link-left" style="position: relative; z-index: 50; padding-top: .8em;">no code?</a>
+						<div class="checkbox">
+							<label>
+								<input id="founder_check" type="checkbox" value="creative-founder">
+								<span class="checkbox-text">Creative Founder?</span>
+							</label>
+						</div>
+						<div class="btn-little-wrapper">
+							<button type="submit" id="add_founder" class="btn-round-little btn-plus"><span class="btn-content-little">Add team member</span></button>
+							<div class="label-btn-little">Add team member</div>
+						</div>
+					</div>
+					<a id="next_btn" class="btn-round btn-check" href="allocate_tals.html">
+						<span class="btn-content">Confirm team and go to Tals</span>
+					</a>
+					<div class="label-btn">Confirm team and go to Tals</div>
+				</form>
+			</div>
+		</div>
+		<ul class="wizard">
+			<li><a href="make_project.html" class="wizard--step wizard--done-step">Project</a></li>
+			<li><span class="wizard--step wizard--active-step">Team</span></li>
+			<li><span class="wizard--step">Tals</span></li>
+			<li><span class="wizard--step">Review and Submit</span></li>
+		</ul>
+	</body>
+</html>

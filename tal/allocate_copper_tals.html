@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tal Registry</title>
+		<link rel="stylesheet" href="style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/jquery.smoothState.min.js"></script>
+		<script src="js/transitions.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="db.js"></script>
+		<script>
+			var project = db_get_session_project();
+			if(project !== null) {
+				function update_total() {
+					project.total_silver_tals = 0;
+					project.total_copper_tals = 0;
+
+					for(var i = 0; i < project.users.length; i++) {
+						var user = project.users[i];
+
+						var silver_elem = document.getElementById(user.__silver_id);
+						if(silver_elem !== null) {
+							silver_elem.innerHTML = user.silver_tals > 0 ? user.silver_tals : "";
+						}
+
+						var copper_elem = document.getElementById(user.__copper_id);
+						if(copper_elem !== null) {
+							user.copper_tals = copper_elem.value | 0;
+							if(user.copper_tals < 0) {
+								user.copper_tals = 0;
+							}
+							copper_elem.value = user.copper_tals > 0 ? user.copper_tals : "";
+						}
+
+						project.total_silver_tals += user.silver_tals;
+						project.total_copper_tals += user.copper_tals;
+					}
+
+					var total_silver_elem = document.getElementById("total_silver");
+					total_silver_elem.innerHTML = project.total_silver_tals;
+					var total_copper_elem = document.getElementById("total_copper");
+					total_copper_elem.innerHTML = project.total_copper_tals;
+				};
+
+				document.addEventListener("DOMContentLoaded", function() {
+					var table_body = document.getElementById("table_body");
+
+					var founders_html = "";
+					var members_html = "";
+
+					for(var i = 0; i < project.users.length; i++) {
+						var user = project.users[i];
+						if(user.type !== "inactive_member") {
+							user.__silver_id = user.key + "_silver";
+							var silver_val = user.silver_tals > 0 ? user.silver_tals : "";
+
+							user.__copper_id = user.key + "_copper";
+							var copper_val = user.copper_tals > 0 ? user.copper_tals : "";
+
+							var html = "";
+							html += "<tr>";
+							html += "<td class=\"tals-attribution-member\">" + user.name + "</td>";
+							html += "<td id=\"" + user.__silver_id + "\"class=\"tals-attribution-silver\"></td>";
+							html += "<td class=\"tals-attribution-copper\"><input id=\"" + user.__copper_id + "\" type=\"number\" value=\"" + copper_val + "\" oninput=\"update_total();\"></td>";
+							html += "</tr>";
+
+							if(user.type === "creative_founder") {
+								founders_html += html;
+							}
+							else {
+								members_html += html;
+							}
+						}
+					}
+					var table_html = founders_html;
+					if(members_html.length > 0) {
+						table_html += "<tr><th colspan=\"3\" style=\"padding-top: 1em;\">Team members</th></tr>"
+						table_html += members_html;
+					}
+					table_body.innerHTML = table_html;
+
+					update_total();
+
+					var next_btn = document.getElementById("next_btn");
+					next_btn.onclick = function() {
+						update_total();
+						db_set_session_project(project, next_btn.href);
+						return true;
+					};
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<header id="site-header">
+			<div class="wrapper">
+				<a href="index.html" class="link-home">Home</a>
+				<span class="site-title">Tal Registry</span>
+			</div>
+		</header>
+		<div id="content" class="animated animated--fadein">
+			<div class="wrapper">
+				<div class="content-fixedheight">
+					<h1 class="page-title">Copper Tals</h1>
+					<p class="page-explanations">Copper Tals are for everyone.</p>
+					<p>Copper Tals are equivalent to economic shares in the project. These can be distributed to anybody in the team.<br>Please allocate Copper Tals below.</p>
+					<br>
+					<br>
+					<table class="tals-attribution tals-attribution-copper-step" cellspacing="0">
+						<thead>
+							<tr>
+								<th class="tals-attribution-member">Founders</th>
+								<th class="tals-attribution-silver">Silver Tals</th>
+								<th class="tals-attribution-copper">Copper Tals</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td>Total Tals</td>
+								<td id="total_silver" class="tals-attribution-silver"></td>
+								<td id="total_copper" class="tals-attribution-copper"></td>
+							</tr>
+						</tfoot>
+						<tbody id="table_body">
+							<tr>
+								<th colspan="3" style="padding-top: 1em;">Team member</th>
+							</tr>
+						</tbody>
+					</table>
+					<a href="faq.html#tals" class="help-link help-link-left">Find out more about Tals</a>
+				</div>
+				<a id="next_btn" class="btn-round btn-check" href="gold_tals.html">
+					<span class="btn-content">Accept and Save</span>
+				</a>
+				<div class="label-btn">Accept and Save</div>
+			</div>
+		</div>
+		<ul class="wizard">
+			<li><a href="make_project.html" class="wizard--step wizard--done-step">Project</a></li>
+			<li><a href="create_team.html" class="wizard--step wizard--done-step">Team</a></li>
+			<li><span class="wizard--step wizard--active-step">Tals</span></li>
+			<li><span class="wizard--step">Review and Submit</span></li>
+		</ul>
+	</body>
+</html>
