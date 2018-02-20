@@ -1,0 +1,142 @@
+
+<!-- TODO ✓
+
+DOING:
+
+TODO:
+	Look at portfolio websites/etc.
+		http://stephaniehurlburt.com/blog/2016/11/14/list-of-engineers-willing-to-mentor-you (Joe)
+
+		http://omershapira.com/
+		http://patrick-is.cool/
+		http://www.sonicether.com/
+		https://eric.engestrom.ch/
+
+		http://stephaniehurlburt.com/
+		http://number-none.com/blow/
+		http://eelpi.gotdns.org/
+
+		http://y78.fr/
+		http://stevenmengin.com
+		http://merijnhos.com/
+	Portfolio layout
+	Find font
+	Page header (Albert/etc.)
+
+	Get a better picture for Garden
+	Get a better picture for Glitchspace
+	Get a high res picture for Playable Architecture
+	Find images for each project
+	Do project descriptions
+
+DONE:
+	Centered layout
+	Basic layout
+	Basic font
+	Find a basic image for each project
+	Add main projects to list
+	Placeholder image
+	Basic portfolio webpage
+	Basic project image
+
+ -->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Albert Elwin</title>
+		<style>
+			@font-face { font-family: "Quattrocento"; src: url("fonts/Quattrocento-Regular.ttf"); }
+		</style>
+		<script>
+			let DATE_NOW = "Now";
+
+			function make_project(name, start_date, end_date, description, image) {
+				return { name: name, start_date: start_date, end_date: end_date, description: description, image: image, };
+			}
+
+			window.onload = function() {
+				let projects = [
+					make_project("Neno and the Dragon", "Nov 2017", DATE_NOW, "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
+					make_project("Drawn to Light", "Nov 2017", null, "A live musical performance by Jonnie Common.", "drawn_to_light.jpg"),
+					make_project("Dark Arts of Shader Programming", "Sep 2017", null, "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
+					make_project("Yasmin Gate", "Aug 2017", null, "A music video.", "yasmin.jpg"),
+					make_project("Garden", "Jun 2017", DATE_NOW, "A VR music game.", "garden.jpg"),
+					make_project("Playable Architecture", "Nov 2016", null, "An interactive projection.", "steeple.jpg"),
+					make_project("Killbox", "Mar 2015", "Nov 2016", "An exploration of drone warfare.", "killbox.jpg"),
+					make_project("Glitchspace", "Aug 2013", "Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
+					make_project("Manifold Garden", "Apr 2017", "Jun 2017", "A first-person exploration game.", "manifold.jpg"),
+				];
+
+				let body = document.body;
+				let body_style = "";
+				body_style += "margin: 0px; padding: 0px;";
+				// body_style += "overflow: hidden;";
+				body_style += "background-color: #000000;";
+				body_style += "color: #FFFFFF;";
+				// body_style += "background-color: #FFFFFF;";
+				// body_style += "color: #000000;";
+				body_style += "font-family: Quattrocento;";
+				body.setAttribute("style", body_style);
+
+				let html = "";
+
+				html += "<div style=\"padding-bottom: 30px;\"></div>";
+				html += "<div style=\"text-align: center;\">";
+				html += "<div style=\"font-size: 48px; font-weight: bold;\">Albert Elwin</div>";
+				html += "<div style=\"font-size: 28px;\">Graphics/Engine Programmer</div>";
+				html += "<div style=\"padding-bottom: 30px;\"></div>";
+				html += "</div>";
+
+				// html += "<h2>PROJECTS</h2>";
+				html += "<div>";
+				for(let i = 0; i < projects.length; i++) {
+					let project = projects[i];
+
+					let date_str = project.start_date;
+					if(project.end_date !== null) {
+						date_str += " - " + project.end_date;
+					}
+
+					let img_file = project.image;
+					if(img_file === null) {
+						img_file = "_placeholder.jpg";
+					}
+					let img_path = "images/" + img_file;
+
+					html += "<div style=\"text-align: center;\">";
+
+					html += "<div style=\"display: inline-block; padding-right: 10px;\">";
+					html += "<img style=\"margin-bottom: -5px;\" src=\"" + img_path + "\" width=\"480\" height=\"270\"></img>";
+					html += "</div>";
+
+					let desc_height = 140;
+
+					// let project_name = project.name.toUpperCase();
+					let project_name = project.name;
+
+					html += "<div style=\"display: inline-block; vertical-align:top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
+					html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project_name + "</div>";
+					html += "<div style=\"font-size: 10px; font-style: italic;\">" + date_str + "</div>";
+					html += "<div style=\"font-size: 14px;\">" + project.description + "</div>";
+					html += "</div>";
+
+					html += "</div>";
+					// if(i < (projects.length - 1)) {
+						html += "<div style=\"padding-bottom: 20px;\"></div>";
+					// }
+				}
+				html += "</div>";
+
+				body.innerHTML = html;
+			}
+		</script>
+	</head>
+
+	<!-- <body style="background-color: #000000; padding: 0; margin: 0;"> -->
+	<body>
+		<!-- <div id="text_box" style="font-family: Courier New, monospace; font-size: 10pt; color: #FFFFFF">Hello, world!</div> -->
+	</body>
+</html>
