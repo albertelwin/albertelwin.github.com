@@ -4,32 +4,23 @@
 DOING:
 
 TODO:
-	Look at portfolio websites/etc.
-		http://stephaniehurlburt.com/blog/2016/11/14/list-of-engineers-willing-to-mentor-you (Joe)
+	Do project descriptions
 
-		http://omershapira.com/
-		http://patrick-is.cool/
-		http://www.sonicether.com/
-		https://eric.engestrom.ch/
-
-		http://stephaniehurlburt.com/
-		http://number-none.com/blow/
-		http://eelpi.gotdns.org/
-
-		http://y78.fr/
-		http://stevenmengin.com
-		http://merijnhos.com/
-	Portfolio layout
-	Find font
-	Page header (Albert/etc.)
+	Contact form
+	About page
+	Make nav links work
+	Cv download link
+	Improve layout
 
 	Get a better picture for Garden
 	Get a better picture for Glitchspace
 	Get a high res picture for Playable Architecture
 	Find images for each project
-	Do project descriptions
 
 DONE:
+	Look at portfolio websites/etc.
+	Clickable nav links
+	Basic page header
 	Centered layout
 	Basic layout
 	Basic font
@@ -60,25 +51,27 @@ DONE:
 			window.onload = function() {
 				let projects = [
 					make_project("Neno and the Dragon", "Nov 2017", DATE_NOW, "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
-					make_project("Drawn to Light", "Nov 2017", null, "A live musical performance by Jonnie Common.", "drawn_to_light.jpg"),
+					make_project("Drawn to Light", "Nov 2017", null, "A live audiovisual performance with music by Jonnie Common.", "drawn_to_light.jpg"),
 					make_project("Dark Arts of Shader Programming", "Sep 2017", null, "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
-					make_project("Yasmin Gate", "Aug 2017", null, "A music video.", "yasmin.jpg"),
-					make_project("Garden", "Jun 2017", DATE_NOW, "A VR music game.", "garden.jpg"),
-					make_project("Playable Architecture", "Nov 2016", null, "An interactive projection.", "steeple.jpg"),
-					make_project("Killbox", "Mar 2015", "Nov 2016", "An exploration of drone warfare.", "killbox.jpg"),
+					make_project("Yasmin Gate", "Aug 2017", null, "A generative music video for artist Yasmin Gate.", "yasmin.jpg"),
+					make_project("Garden", "Jun 2017", DATE_NOW, "A virtual-reality music game set in a neon organic world.", "garden.jpg"),
+					make_project("Manifold Garden", "Apr 2017", "Jun 2017", "A first-person exploration game full of infinite and impossible geometry.", "manifold.jpg"),
+					make_project("Playable Architecture", "Nov 2016", null, "A publicly playable projection-mapped building.", "steeple.jpg"),
+					make_project("Killbox", "Mar 2015", "Nov 2016", "An exploration of drone warfare in video-game form.", "killbox.jpg"),
 					make_project("Glitchspace", "Aug 2013", "Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
-					make_project("Manifold Garden", "Apr 2017", "Jun 2017", "A first-person exploration game.", "manifold.jpg"),
 				];
+
+				let bg_color = "#000000";
+				let text_color = "#FFFFFF";
 
 				let body = document.body;
 				let body_style = "";
 				body_style += "margin: 0px; padding: 0px;";
 				// body_style += "overflow: hidden;";
-				body_style += "background-color: #000000;";
-				body_style += "color: #FFFFFF;";
-				// body_style += "background-color: #FFFFFF;";
-				// body_style += "color: #000000;";
+				body_style += "background-color: " + bg_color + ";";
+				body_style += "color: " + text_color + ";";
 				body_style += "font-family: Quattrocento;";
+				// body_style += "font-family: PragmataPro;";
 				body.setAttribute("style", body_style);
 
 				let html = "";
@@ -86,7 +79,14 @@ DONE:
 				html += "<div style=\"padding-bottom: 30px;\"></div>";
 				html += "<div style=\"text-align: center;\">";
 				html += "<div style=\"font-size: 48px; font-weight: bold;\">Albert Elwin</div>";
-				html += "<div style=\"font-size: 28px;\">Graphics/Engine Programmer</div>";
+				// html += "<div style=\"font-size: 28px;\">Graphics/Engine Programmer</div>";
+				html += "<div style=\"font-size: 28px;\">Graphics Programmer & Artist</div>";
+				html += "<div style=\"padding-bottom: 23px;\"></div>";
+				html += "<div>";
+				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px; padding-right: 25px;\">PROJECTS</a>";
+				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px; padding-right: 25px;\">ABOUT</a>";
+				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px;\">CONTACT</a>";
+				html += "</div>";
 				html += "<div style=\"padding-bottom: 30px;\"></div>";
 				html += "</div>";
 
@@ -97,7 +97,8 @@ DONE:
 
 					let date_str = project.start_date;
 					if(project.end_date !== null) {
-						date_str += " - " + project.end_date;
+						// date_str += " - " + project.end_date;
+						date_str += " \xa0→ " + project.end_date;
 					}
 
 					let img_file = project.image;
@@ -119,7 +120,8 @@ DONE:
 
 					html += "<div style=\"display: inline-block; vertical-align:top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
 					html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project_name + "</div>";
-					html += "<div style=\"font-size: 10px; font-style: italic;\">" + date_str + "</div>";
+					html += "<div style=\"font-size: 10px; font-style: italic;\">" + date_str.toUpperCase() + "</div>";
+					html += "<div style=\"padding-bottom: 5px;\"></div>";
 					html += "<div style=\"font-size: 14px;\">" + project.description + "</div>";
 					html += "</div>";
 
