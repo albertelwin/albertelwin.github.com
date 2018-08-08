@@ -550,7 +550,7 @@
 			"file": "/C/Users/Albert/Dropbox/Misc/projects.txt",
 			"settings":
 			{
-				"buffer_size": 2381,
+				"buffer_size": 2506,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -559,7 +559,7 @@
 			"file": "/C/Users/Albert/Dropbox/Misc/freelancing.txt",
 			"settings":
 			{
-				"buffer_size": 1658,
+				"buffer_size": 1714,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -788,6 +788,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Albert/albertelw.in/__gif/main.cpp",
 		"/C/Users/Albert/Verde/repo/Assets/Scripts/Foliage.cs",
 		"/C/Users/Albert/Verde/repo/Assets/Scripts/Basic.cginc",
 		"/C/Users/Albert/Verde/repo/Assets/Scripts/BasicGradient.shader",
@@ -879,7 +880,6 @@
 		"/C/Users/Albert/Downloads/SDCWin32(2)/SDCWin32/Extra Data Files/Snake Oil Engine Files (CRITICAL)/DontTreadOnMe/.Recycle Bin/internal-art-memo.txt",
 		"/C/Users/Albert/GFX/src/math.hpp",
 		"/C/Users/Albert/Downloads/creative_dundee.txt",
-		"/C/Users/Albert/albertelw.in/__gif/main.cpp",
 		"/C/Users/Albert/albertelw.in/profile/index.html",
 		"/C/Users/Albert/albertelw.in/__gif/content/avi_to_gif.bat",
 		"/C/Users/Albert/albertelw.in/gif_yt/index.html",
@@ -1174,15 +1174,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2381,
+						"buffer_size": 2506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1202,15 +1202,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1658,
+						"buffer_size": 1714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								349,
-								349
+								585,
+								585
 							]
 						],
 						"settings":
@@ -1259,7 +1259,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -1309,6 +1309,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gif",
+				"__gif\\main.cpp"
+			],
 			[
 				"fre",
 				"C:\\Users\\Albert\\Dropbox\\Misc\\freelancing.txt"
@@ -1816,10 +1820,6 @@
 			[
 				"aud",
 				"src\\audio.hpp"
-			],
-			[
-				"audoi",
-				"src\\audio.cpp"
 			]
 		],
 		"width": 0.0
@@ -1827,9 +1827,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ele",
+		"last_filter": "bu",
 		"selected_items":
 		[
+			[
+				"bu",
+				"C:\\Users\\Albert\\Ant\\Bushido\\bushido.sublime-project"
+			],
 			[
 				"ele",
 				"C:\\Users\\Albert\\Electron\\electron.sublime-project"
