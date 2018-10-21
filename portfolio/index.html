@@ -4,20 +4,22 @@
 DOING:
 
 TODO:
-	Do project descriptions
-
 	Contact form
 	About page
 	Make nav links work
 	Cv download link
 	Improve layout
 
-	Get a better picture for Garden
 	Get a better picture for Glitchspace
 	Get a high res picture for Playable Architecture
-	Find images for each project
+
+	--
+
+	Better project descriptions
 
 DONE:
+	Find images for each project
+	Get a better picture for Garden
 	Look at portfolio websites/etc.
 	Clickable nav links
 	Basic page header
@@ -37,89 +39,53 @@ DONE:
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="theme-color" content="#000000">
 		<title>Albert Elwin</title>
 		<style>
-			@font-face { font-family: "Quattrocento"; src: url("fonts/Quattrocento-Regular.ttf"); }
+			@font-face { font-family: "Quattrocento"; src: url("../Quattrocento-Regular.ttf"); }
 		</style>
+		<script src="../site.js"></script>
 		<script>
-			let DATE_NOW = "Now";
-
-			function make_project(name, start_date, end_date, description, image) {
-				return { name: name, start_date: start_date, end_date: end_date, description: description, image: image, };
+			function make_project(name, subtitle, date, description, image) {
+				return { name: name, subtitle: subtitle, date: date, description: description, image: image, };
 			}
 
 			window.onload = function() {
 				let projects = [
-					make_project("Neno and the Dragon", "Nov 2017", DATE_NOW, "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
-					make_project("Drawn to Light", "Nov 2017", null, "A live audiovisual performance with music by Jonnie Common.", "drawn_to_light.jpg"),
-					make_project("Dark Arts of Shader Programming", "Sep 2017", null, "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
-					make_project("Yasmin Gate", "Aug 2017", null, "A generative music video for artist Yasmin Gate.", "yasmin.jpg"),
-					make_project("Garden", "Jun 2017", DATE_NOW, "A virtual-reality music game set in a neon organic world.", "garden.jpg"),
-					make_project("Manifold Garden", "Apr 2017", "Jun 2017", "A first-person exploration game full of infinite and impossible geometry.", "manifold.jpg"),
-					make_project("Playable Architecture", "Nov 2016", null, "An interactive projection-mapped building.", "steeple.jpg"),
-					make_project("Killbox", "Mar 2015", "Nov 2016", "An exploration of drone warfare in the form of a video-game.", "killbox.jpg"),
-					make_project("Glitchspace", "Aug 2013", "Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
+					make_project("Garden", "Biome Collective • Oculus Rift", "Jun 2017  \xa0→ Now", "A virtual-reality music game set in a neon organic world.", "garden.jpg"),
+					make_project("#SelfCare", "Tru Luv Media • iOS/Android", "Jun 2018 \xa0→ Aug 2018", "A free, simple, and beautiful relaxation companion.", "selfcare.jpg"),
+					make_project("Shpeel", "Biome Collective • Somerset House", "Sep 2018", "An interactive 360° projection at London Design Biennale 2018.", "shpeel.jpg"),
+					make_project("Black & White Bushido", "Good Catch • Nintendo Switch", "Jul 2018 \xa0→ Sep 2018", "A multiplayer stealth game ported to Nintendo Switch.", "bushido.jpg"),
+					// make_project("Neno and the Dragon", "Neno • PC", "Nov 2017 \xa0→ Now", "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
+					make_project("Drawn to Light", "Jonnie Common • McManus Galleries", "Nov 2017", "A live audiovisual performance with music by Jonnie Common.", "drawn_to_light.jpg"),
+					make_project("Dark Arts of Shader Programming", "Arcadia Festival • Shadertoy", "Sep 2017", "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
+					make_project("Radio", "Yasmin Gate • YouTube", "Aug 2017", "A generative music video for artist Yasmin Gate.", "yasmin.jpg"),
+					make_project("Manifold Garden", "William Chyr • PC/PS4", "Apr 2017 \xa0→ Jun 2017", "A first-person exploration game full of infinite and impossible geometry.", "manifold.jpg"),
+					make_project("Playable Architecture", "Biome Collective • Steeple Church", "Nov 2016", "An interactive projection-mapped building.", "steeple.jpg"),
+					make_project("Killbox", "Biome Collective • PC/Steam", "Mar 2015 \xa0→ Nov 2016", "An exploration of drone warfare in the form of a video-game.", "killbox.jpg"),
+					make_project("Glitchspace", "Space Budgie • PC/Steam", "Aug 2013 \xa0→ Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
 				];
-
-				let bg_color = "#000000";
-				let text_color = "#FFFFFF";
-
-				let body = document.body;
-				let body_style = "";
-				body_style += "margin: 0px; padding: 0px;";
-				// body_style += "overflow: hidden;";
-				body_style += "background-color: " + bg_color + ";";
-				body_style += "color: " + text_color + ";";
-				body_style += "font-family: Quattrocento;";
-				// body_style += "font-family: PragmataPro;";
-				body.setAttribute("style", body_style);
 
 				let html = "";
 
-				html += "<div style=\"padding-bottom: 30px;\"></div>";
-				html += "<div style=\"text-align: center;\">";
-				html += "<div style=\"font-size: 48px; font-weight: bold;\">Albert Elwin</div>";
-				html += "<div style=\"font-size: 28px;\">Graphics/Engine Programmer</div>";
-				html += "<div style=\"padding-bottom: 23px;\"></div>";
-				html += "<div>";
-				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px; padding-right: 25px;\">PROJECTS</a>";
-				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px; padding-right: 25px;\">ABOUT</a>";
-				html += "<a href=\"\" style=\"display: inline-block; text-decoration: none; color: " + text_color + "; font-size: 14px;\">CONTACT</a>";
-				html += "</div>";
-				html += "<div style=\"padding-bottom: 30px;\"></div>";
-				html += "</div>";
-
-				// html += "<h2>PROJECTS</h2>";
 				html += "<div>";
 				for(let i = 0; i < projects.length; i++) {
 					let project = projects[i];
 
-					let date_str = project.start_date;
-					if(project.end_date !== null) {
-						// date_str += " - " + project.end_date;
-						date_str += " \xa0→ " + project.end_date;
-					}
-
-					let img_file = project.image;
-					if(img_file === null) {
-						img_file = "_placeholder.jpg";
-					}
-					let img_path = "images/" + img_file;
+					// let subtitle = project.date;
+					let subtitle = project.subtitle;
 
 					html += "<div style=\"text-align: center;\">";
 
 					html += "<div style=\"display: inline-block; padding-right: 10px;\">";
-					html += "<img style=\"margin-bottom: -5px;\" src=\"" + img_path + "\" width=\"480\" height=\"270\"></img>";
+					html += "<img style=\"margin-bottom: -5px;\" src=\"images/" + project.image + "\" width=\"480\" height=\"270\"></img>";
 					html += "</div>";
 
 					let desc_height = 140;
 
-					// let project_name = project.name.toUpperCase();
-					let project_name = project.name;
-
-					html += "<div style=\"display: inline-block; vertical-align:top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
-					html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project_name + "</div>";
-					html += "<div style=\"font-size: 10px; font-style: italic;\">" + date_str.toUpperCase() + "</div>";
+					html += "<div style=\"display: inline-block; vertical-align: top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
+					html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project.name + "</div>";
+					html += "<div style=\"font-size: 10px; font-style: italic;\">" + subtitle.toUpperCase() + "</div>";
 					html += "<div style=\"padding-bottom: 5px;\"></div>";
 					html += "<div style=\"font-size: 14px;\">" + project.description + "</div>";
 					html += "</div>";
@@ -131,13 +97,9 @@ DONE:
 				}
 				html += "</div>";
 
-				body.innerHTML = html;
+				init_page(PAGE_ID.PROJECTS, html);
 			}
 		</script>
 	</head>
-
-	<!-- <body style="background-color: #000000; padding: 0; margin: 0;"> -->
-	<body>
-		<!-- <div id="text_box" style="font-family: Courier New, monospace; font-size: 10pt; color: #FFFFFF">Hello, world!</div> -->
-	</body>
+	<body></body>
 </html>

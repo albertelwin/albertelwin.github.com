@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Albert Elwin</title>
+		<style>
+			@font-face { font-family: "Quattrocento"; src: url("../Quattrocento-Regular.ttf"); }
+		</style>
+		<script src="../site.js"></script>
+		<script>
+			let MAP_URL = "https://www.google.com/maps/place/Biome+Collective/@56.4558133,-2.9797192,17z/data=!4m5!3m4!1s0x0:0x50fa227c1c684a74!8m2!3d56.4561297!4d-2.9788291";
+
+			window.onload = function() {
+				let html = "";
+
+				html += "<a href=\"" + MAP_URL + "\">";
+				html += "<div style=\"display: inline-block;\"><img style=\"margin-bottom: -5px;\" src=\"map.jpg\" width=\"640\" height=\"360\"></img></div>";
+				html += "</a>";
+				html += "<div style=\"padding-bottom: 10px;\"></div>";
+				html += "<div style=\"display: inline-block; vertical-align: top; text-align: left; width: 320px; -webkit-filter: grayscale(100%); filter: grayscale(100%);\">&#128231; dev@albertelw.in</div>";
+				html += "<div style=\"display: inline-block; vertical-align: top; text-align: right; width: 320px;\">Unit 5, 20 Greenmarket<br>Dundee<br>DD1 4QB</div>";
+
+				init_page(PAGE_ID.CONTACT, html);
+			}
+		</script>
+	</head>
+	<body></body>
+</html>
