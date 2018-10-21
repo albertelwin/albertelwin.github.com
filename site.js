@@ -42,11 +42,11 @@ function init_page(page_id, page_html) {
 		}
 
 		let url = pages[i].url;
-		if(url.length > 0) {
-			if(url[url.length - 1] == '/') {
-				url += "index.html";
-			}
-		}
+		// if(url.length > 0) {
+		// 	if(url[url.length - 1] == '/') {
+		// 		url += "index.html";
+		// 	}
+		// }
 
 		let style = "text-decoration: none; color: " + TEXT_COLOR + ";";
 		if(pages[i].id === page_id) {
