@@ -39,7 +39,7 @@
 
 			html += "<div style=\"text-align:center; width: " + header_width + "px; height: " + header_height + "px; margin: auto; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000;\">";
 
-			html += begin_hyperlink(url);
+			html += begin_hyperlink(url, "");
 			html += "<div style=\"background-color: " + header_bg + "; width: " + header_width + "px; height: " + title_height + "px;\">";
 			html += vpad(34);
 			html += "<div style=\"text-align: center; font-size: 62px; font-weight: bold;\">Albert Elwin</div>";
@@ -49,7 +49,7 @@
 
 			html += vpad(spacing);
 
-			html += begin_hyperlink(url);
+			html += begin_hyperlink(url, "");
 			html += "<div style=\"display: inline-block; background-color: " + header_bg + "; border: 2px solid #FFFFFF; width: 120px; height: " + button_height + "px;\">";
 			html += vpad(12);
 			html += "<div style=\"text-align: center; font-size: 24px;\">Enter</div>";
