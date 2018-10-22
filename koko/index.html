@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Monkey Business</title>
+		<style>
+			::-webkit-scrollbar { display: none; width: 0 !important; }
+		</style>
+
+		<!-- NOTE: Web App -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="manifest.json">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5ad56d">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+	</head>
+	<body style='margin: 0; background-color: #000000;'>
+		<!-- <div style='width: 960px; height: 540px; text-align: center; vertical-align: middle; display: table-cell;'> -->
+		<!-- <div style='position: absolute; margin: auto; top: 50%; left: 50%; -moz-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);'> -->
+		<div style='width: 100%; text-align: center;'>
+			<div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF; display: none;'></div>
+			<img id='loading' style='' src='loading.gif'>
+			<canvas id='canvas' style="padding: none; border 0px none; display: none; cursor: '';" oncontextmenu='event.preventDefault()'></canvas>
+		</div>
+		<!-- <div id='log' style='font-family: "Courier New"; font-size: 14px; color: #FFFFFF;'></div> -->
+
+		<!-- NOTE: Some servers struggle to load the .mem and .data files so they need to be renamed to .js and changed in index.html and koko.js -->
+		<script type='text/javascript'>
+			var log_elem = document.getElementById('log');
+			var loading_elem = document.getElementById('loading');
+			var canvas_elem = document.getElementById('canvas');
+
+			function on_resize() {
+				var canvas = document.getElementById("canvas");
+
+				var canvas_aspect = 16.0 / 9.0;
+				var window_aspect = window.innerWidth / window.innerHeight;
+
+				if(canvas_aspect > window_aspect) {
+					canvas.width = window.innerWidth;
+					canvas.height = canvas.width / canvas_aspect;
+				}
+				else {
+					canvas.height = window.innerHeight;
+					canvas.width = canvas.height * canvas_aspect;
+				}
+
+				if(loading_elem.style.display === '') {
+					//TODO: Hack!!
+					var canvas_scale = canvas.width / 960.0;
+					loading_elem.width = 300.0 * canvas_scale;
+					loading_elem.style.marginTop = ((37.0 * canvas_scale) | 0) + "px";
+				}
+
+				// console.log("on_resize(), " + canvas.width + ", " + canvas.height);
+			};
+			on_resize();
+			window.addEventListener("resize", on_resize);
+
+			var Module = {
+				postRun: [ function() {
+					log_elem.innerHTML = '';
+					canvas.style.display = '';
+					loading_elem.style.display = 'none';
+
+					on_resize();
+				}],
+
+				print: function(text) {
+					if(arguments.length > 1) {
+						text = Array.prototype.slice.call(arguments).join(' ');
+					}
+
+					console.log(text);
+					// log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
+				},
+
+				printErr: function(text) {
+					if(arguments.length > 1) {
+						text = Array.prototype.slice.call(arguments).join(' ');
+					}
+
+					var req = new XMLHttpRequest();
+					req.onload = function() {
+						console.log(req.status + ", " + req.responseText);
+					};
+					req.open("POST", "https://script.google.com/macros/s/AKfycbxhoKt30zmdbSWRRdJ5LLvsMdBKnllWzmp7iz7AT8MRo_OlnxuZ/exec", true);
+					req.send(text + "\n\n" + window.location.href + "\n" + navigator.appName + " [" + navigator.appCodeName + "] " + navigator.appVersion);
+
+					// alert(text);
+					console.error(text);
+					// log_elem.innerHTML = text + "<br>" + log_elem.innerHTML;
+				},
+
+				canvas: (function() {
+					var canvas = document.getElementById('canvas');
+
+					// As a default initial behavior, pop up an alert when webgl context is lost. To make your
+					// application robust, you may want to override this behavior before shipping!
+					// See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+					canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+					return canvas;
+				})(),
+
+				setStatus: function(text) {
+					if(text !== '') {
+						text = text.replace(/#/g, '█');
+						console.log('STATUS: ' + text + '\n');
+						log_elem.innerHTML = text;
+					}
+				},
+
+				totalDependencies: 0,
+				monitorRunDependencies: function(left) {
+					this.totalDependencies = Math.max(this.totalDependencies, left);
+					//TODO: Do we really need to see this??
+					// Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+				}
+			};
+
+			window.onerror = function(event) {
+				var event_str = event.toString();
+
+				var ignored = false;
+				var ignored_exceptions = [
+					"SimulateInfiniteLoop",
+				];
+				for(var i = 0; i < ignored_exceptions.length; i++) {
+					if(event_str.indexOf(ignored_exceptions[i] > -1)) {
+						ignored = true;
+						break;
+					}
+				}
+
+				if(ignored === false) {
+					Module.setStatus('EXCEPTION: ' + event + '\n');
+				}
+			};
+		</script>
+		<script>
+var ASSERTIONS = 0;
+// Prefix of data URIs emitted by SINGLE_FILE and related options.
+var dataURIPrefix = 'data:application/octet-stream;base64,';
+
+// Indicates whether filename is a base64 data URI.
+function isDataURI(filename) {
+  return String.prototype.startsWith ?
+      filename.startsWith(dataURIPrefix) :
+      filename.indexOf(dataURIPrefix) === 0;
+}
+
+// Copied from https://github.com/strophe/strophejs/blob/e06d027/src/polyfills.js#L149
+
+// This code was written by Tyler Akins and has been placed in the
+// public domain.  It would be nice if you left this header intact.
+// Base64 code from Tyler Akins -- http://rumkin.com
+
+/**
+ * Decodes a base64 string.
+ * @param {String} input The string to decode.
+ */
+var decodeBase64 = typeof atob === 'function' ? atob : function (input) {
+  var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+  var output = '';
+  var chr1, chr2, chr3;
+  var enc1, enc2, enc3, enc4;
+  var i = 0;
+  // remove all characters that are not A-Z, a-z, 0-9, +, /, or =
+  input = input.replace(/[^A-Za-z0-9\+\/\=]/g, '');
+  do {
+    enc1 = keyStr.indexOf(input.charAt(i++));
+    enc2 = keyStr.indexOf(input.charAt(i++));
+    enc3 = keyStr.indexOf(input.charAt(i++));
+    enc4 = keyStr.indexOf(input.charAt(i++));
+
+    chr1 = (enc1 << 2) | (enc2 >> 4);
+    chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+    chr3 = ((enc3 & 3) << 6) | enc4;
+
+    output = output + String.fromCharCode(chr1);
+
+    if (enc3 !== 64) {
+      output = output + String.fromCharCode(chr2);
+    }
+    if (enc4 !== 64) {
+      output = output + String.fromCharCode(chr3);
+    }
+  } while (i < input.length);
+  return output;
+};
+
+// Converts a string of base64 into a byte array.
+// Throws error on invalid input.
+function intArrayFromBase64(s) {
+  if (typeof ENVIRONMENT_IS_NODE === 'boolean' && ENVIRONMENT_IS_NODE) {
+    var buf;
+    try {
+      buf = Buffer.from(s, 'base64');
+    } catch (_) {
+      buf = new Buffer(s, 'base64');
+    }
+    return new Uint8Array(buf.buffer, buf.byteOffset, buf.byteLength);
+  }
+
+  try {
+    var decoded = decodeBase64(s);
+    var bytes = new Uint8Array(decoded.length);
+    for (var i = 0 ; i < decoded.length ; ++i) {
+      bytes[i] = decoded.charCodeAt(i);
+    }
+    return bytes;
+  } catch (_) {
+    throw new Error('Converting base64 string to bytes failed.');
+  }
+}
+
+// If filename is a base64 data URI, parses and returns data (Buffer on node,
+// Uint8Array otherwise). If filename is not a base64 data URI, returns undefined.
+function tryParseAsDataURI(filename) {
+  if (!isDataURI(filename)) {
+    return;
+  }
+
+  return intArrayFromBase64(filename.slice(dataURIPrefix.length));
+}
+/** @type {function(string, boolean=, number=)} */
+function intArrayFromString(stringy, dontAddNull, length) {
+  var len = length > 0 ? length : lengthBytesUTF8(stringy)+1;
+  var u8array = new Array(len);
+  var numBytesWritten = stringToUTF8Array(stringy, u8array, 0, u8array.length);
+  if (dontAddNull) u8array.length = numBytesWritten;
+  return u8array;
+}
+
+function intArrayToString(array) {
+  var ret = [];
+  for (var i = 0; i < array.length; i++) {
+    var chr = array[i];
+    if (chr > 0xFF) {
+      if (ASSERTIONS) {
+        assert(false, 'Character code ' + chr + ' (' + String.fromCharCode(chr) + ')  at offset ' + i + ' not in 0x00-0xFF.');
+      }
+      chr &= 0xFF;
+    }
+    ret.push(String.fromCharCode(chr));
+  }
+  return ret.join('');
+}
+
+          var memoryInitializer = 'koko_mem.js';
+          if (typeof Module['locateFile'] === 'function') {
+            memoryInitializer = Module['locateFile'](memoryInitializer);
+          } else if (Module['memoryInitializerPrefixURL']) {
+            memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
+          }
+          Module['memoryInitializerRequestURL'] = memoryInitializer;
+          var meminitXHR = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+          meminitXHR.open('GET', memoryInitializer, true);
+          meminitXHR.responseType = 'arraybuffer';
+          meminitXHR.send(null);
+
+          var script = document.createElement('script');
+          script.src = "koko.js";
+          document.body.appendChild(script);
+
+</script>
+	</body>
+</html>
