@@ -1,6 +1,7 @@
 __gif/
 __mass/
 __portfolio/
+__tmp/
 *.sublime-project
 *.sublime-workspace
 todo.txt

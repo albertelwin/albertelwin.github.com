@@ -6,54 +6,11 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="theme-color" content="#000000">
 		<title>Albert Elwin</title>
-		<style>
-			@font-face { font-family: "Quattrocento"; src: url("Quattrocento-Regular.ttf"); }
-
-			::-webkit-scrollbar { display: none; width: 0 !important; }
-			*::-webkit-media-controls-panel { display: none! important; -webkit-appearance: none; }
-			*::--webkit-media-controls-play-button { display: none! important; -webkit-appearance: none; }
-			*::-webkit-media-controls-start-playback-button { display: none! important; -webkit-appearance: none; }
-		</style>
-		<script>
-			function force_vid_play() {
-				var vids = document.getElementById("vids").children;
-				for(var i = 0; i < vids.length; i++) {
-					vids[i].play();
-				}
-			}
-
-			window.onload = function() {
-				var vids = document.getElementById("vids").children;
-				for(var i = 0; i < vids.length; i++) {
-					var vid = vids[i];
-					vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
-					vid.onwaiting = function() { if(!isNaN(this.duration)) { this.currentTime = 0; } };
-					vid.onclick = force_vid_play;
-					vid.play();
-				}
-			}
-		</script>
 	</head>
 
-	<body style="background-color: #000000; padding: 0; margin: 0; color: #FFFFFF; font-family: Quattrocento;">
-		<a href="portfolio/" style="text-decoration: none; color: #FFFFFF;">
-		<div style="background-color: #000000D6; text-align:center; height: 190px; width: 690px; margin: auto; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000;">
-				<div style="padding-bottom: 32px;"></div>
-				<div style="text-align: center;">
-					<div style="font-size: 62px; font-weight: bold;">Albert Elwin</div>
-					<div style="font-size: 42px;">Graphics/Engine Programmer</div>
-				</div>
-		</div>
-		</a>
-
-		<div id="vids" style="font-size: 0;">
-			<video src="gif/vid0.mp4" poster="gif/vid0.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid1.mp4" poster="gif/vid1.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid2.mp4" poster="gif/vid2.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid3.mp4" poster="gif/vid3.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid4.mp4" poster="gif/vid4.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid5.mp4" poster="gif/vid5.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid6.mp4" poster="gif/vid6.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
+	<body style="background-color: #000000; padding: 0; margin: 0; color: #FFFFFF;">
+		<div>
+			Hello, world!
 		</div>
 	</body>
 </html>
