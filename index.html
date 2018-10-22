@@ -14,55 +14,77 @@
 			*::--webkit-media-controls-play-button { display: none! important; -webkit-appearance: none; }
 			*::-webkit-media-controls-start-playback-button { display: none! important; -webkit-appearance: none; }
 		</style>
-		<script>
-			function force_vid_play() {
-				var vids = document.getElementById("vids").children;
-				for(var i = 0; i < vids.length; i++) {
-					vids[i].play();
-				}
-			}
-
-			window.onload = function() {
-				var vids = document.getElementById("vids").children;
-				for(var i = 0; i < vids.length; i++) {
-					var vid = vids[i];
-					vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
-					vid.onwaiting = function() { if(!isNaN(this.duration)) { this.currentTime = 0; } };
-					vid.onclick = force_vid_play;
-					vid.play();
-				}
-			}
-		</script>
+		<script src="site.js"></script>
 	</head>
+	<body></body>
 
-	<body style="background-color: #000000; padding: 0; margin: 0; color: #FFFFFF; font-family: Quattrocento;">
-		<div style="text-align:center; width: 690px; height: 250px; margin: auto; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000;">
-			<a href="portfolio/" style="text-decoration: none; color: #FFFFFF;">
-				<div style="background-color: #000000D6; width: 690px; height: 190px;">
-						<div style="padding-bottom: 34px;"></div>
-						<div style="text-align: center;">
-							<div style="font-size: 62px; font-weight: bold;">Albert Elwin</div>
-							<div style="font-size: 42px;">Graphics/Engine Programmer</div>
-						</div>
-				</div>
-			</a>
-			<div style="padding-bottom: 10px;"></div>
-			<a href="portfolio/" style="text-decoration: none; color: #FFFFFF;">
-				<div style="display: inline-block; background-color: #000000D6; border: 2px solid #FFFFFF; width: 120px; height: 50px;">
-					<div style="padding-bottom: 12px;"></div>
-					<div style="font-size: 24px;">Enter</div>
-				</div>
-			</a>
-		</div>
+	<script>
+		function load_page() {
+			init_body();
 
-		<div id="vids" style="font-size: 0;">
-			<video src="gif/vid0.mp4" poster="gif/vid0.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid1.mp4" poster="gif/vid1.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid2.mp4" poster="gif/vid2.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid3.mp4" poster="gif/vid3.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid4.mp4" poster="gif/vid4.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid5.mp4" poster="gif/vid5.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-			<video src="gif/vid6.mp4" poster="gif/vid6.jpg" width="100%" autoplay loop muted webkit-playsinline playsinline></video>
-		</div>
-	</body>
+			let html = "";
+
+			let url = "portfolio/";
+			if(IS_LOCAL) {
+				url += "index.html";
+			}
+
+			let title_height = 190;
+			let spacing = 10;
+			let button_height = 50;
+
+			let header_bg = "#000000D6";
+			let header_width = 690;
+			let header_height = title_height + spacing + button_height;
+
+			html += "<div style=\"text-align:center; width: " + header_width + "px; height: " + header_height + "px; margin: auto; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000;\">";
+
+			html += begin_hyperlink(url);
+			html += "<div style=\"background-color: " + header_bg + "; width: " + header_width + "px; height: " + title_height + "px;\">";
+			html += vpad(34);
+			html += "<div style=\"text-align: center; font-size: 62px; font-weight: bold;\">Albert Elwin</div>";
+			html += "<div style=\"text-align: center; font-size: 42px;\">Graphics/Engine Programmer</div>";
+			html += "</div>";
+			html += end_hyperlink();
+
+			html += vpad(spacing);
+
+			html += begin_hyperlink(url);
+			html += "<div style=\"display: inline-block; background-color: " + header_bg + "; border: 2px solid #FFFFFF; width: 120px; height: " + button_height + "px;\">";
+			html += vpad(12);
+			html += "<div style=\"text-align: center; font-size: 24px;\">Enter</div>";
+			html += "</div>";
+			html += end_hyperlink();
+
+			html += "</div>";
+
+			html += "<div id=\"vids\" style=\"font-size: 0;\">";
+			for(let i = 0; i < 7; i++) {
+				html += "<video src=\"gif/vid" + i + ".mp4\" poster=\"gif/vid" + i + ".jpg\" width=\"100%\" autoplay loop muted webkit-playsinline playsinline></video>";
+			}
+			html += "</div>";
+
+			document.body.innerHTML = html;
+		}
+
+		load_page();
+
+		function force_vid_play() {
+			var vids = document.getElementById("vids").children;
+			for(var i = 0; i < vids.length; i++) {
+				vids[i].play();
+			}
+		}
+
+		window.onload = function() {
+			var vids = document.getElementById("vids").children;
+			for(var i = 0; i < vids.length; i++) {
+				var vid = vids[i];
+				vid.oncanplaythrough = function() { if(this.paused) { this.play(); } };
+				vid.onwaiting = function() { if(!isNaN(this.duration)) { this.currentTime = 0; } };
+				vid.onclick = force_vid_play;
+				vid.play();
+			}
+		}
+	</script>
 </html>

@@ -1,4 +1,6 @@
 
+let IS_LOCAL = window.location.protocol === "file:";
+
 let BG_COLOR = "#000000";
 let TEXT_COLOR = "#FFFFFF";
 
@@ -9,14 +11,29 @@ let PAGE_ID = {
 	CV: 4,
 }
 
-function init_page(page_id, page_html) {
-	let body = document.body;
+function vpad(px) {
+	return "<div style=\"padding-bottom: " + px + "px;\"></div>";
+}
+
+function begin_hyperlink(url, style) {
+	return "<a href=\"" + url + "\" style=\"text-decoration: none; color: " + TEXT_COLOR + "; " + style + "\">";
+}
+
+function end_hyperlink(url) {
+	return "</a>";
+}
+
+function init_body() {
 	let body_style = "";
 	body_style += "margin: 0px; padding: 0px;";
 	body_style += "background-color: " + BG_COLOR + ";";
 	body_style += "color: " + TEXT_COLOR + ";";
 	body_style += "font-family: Quattrocento;";
-	body.setAttribute("style", body_style);
+	document.body.setAttribute("style", body_style);
+}
+
+function init_page(page_id, page_html) {
+	init_body();
 
 	let html = "";
 
@@ -42,20 +59,20 @@ function init_page(page_id, page_html) {
 		}
 
 		let url = pages[i].url;
-		// if(url.length > 0) {
-		// 	if(url[url.length - 1] == '/') {
-		// 		url += "index.html";
-		// 	}
-		// }
-
-		let style = "text-decoration: none; color: " + TEXT_COLOR + ";";
-		if(pages[i].id === page_id) {
-			style += " font-weight: bold;";
+		if(IS_LOCAL && url.length > 0) {
+			if(url[url.length - 1] == '/') {
+				url += "index.html";
+			}
 		}
 
-		html += "<a href=\"" + url + "\" style=\"" + style + "\">";
+		let style = "";
+		if(pages[i].id === page_id) {
+			style = "font-weight: bold;";
+		}
+
+		html += begin_hyperlink(url, style);
 		html += pages[i].label;
-		html += "</a>";
+		html += end_hyperlink();
 	}
 
 	html += "</div>";
@@ -63,5 +80,5 @@ function init_page(page_id, page_html) {
 
 	html += page_html;
 
-	body.innerHTML = html;
+	document.body.innerHTML = html;
 }
