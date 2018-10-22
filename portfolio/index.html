@@ -10,61 +10,64 @@
 			@font-face { font-family: "Quattrocento"; src: url("../Quattrocento-Regular.ttf"); }
 		</style>
 		<script src="../site.js"></script>
-		<script>
-			function make_project(name, subtitle, date, description, image) {
-				return { name: name, subtitle: subtitle, date: date, description: description, image: image, };
-			}
+	</head>
+	<body></body>
 
-			window.onload = function() {
-				let projects = [
-					make_project("Garden", "Biome Collective • Oculus Rift", "Jun 2017  \xa0→ Now", "A virtual-reality music game set in a neon organic world.", "garden.jpg"),
-					make_project("#SelfCare", "Tru Luv Media • iOS/Android", "Jun 2018 \xa0→ Aug 2018", "A free, simple, and beautiful relaxation companion.", "selfcare.jpg"),
-					make_project("Shpeel", "Biome Collective • Somerset House", "Sep 2018", "An interactive 360° projection at London Design Biennale 2018.", "shpeel.jpg"),
-					make_project("Black & White Bushido", "Good Catch • Nintendo Switch", "Jul 2018 \xa0→ Sep 2018", "A multiplayer stealth game ported to Nintendo Switch.", "bushido.jpg"),
-					// make_project("Neno and the Dragon", "Neno • PC", "Nov 2017 \xa0→ Now", "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
-					make_project("Drawn to Light", "Jonnie Common • McManus Galleries", "Nov 2017", "A live audiovisual performance with music by Jonnie Common.", "drawn_to_light.jpg"),
-					make_project("Dark Arts of Shader Programming", "Arcadia Festival • Shadertoy", "Sep 2017", "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
-					make_project("Radio", "Yasmin Gate • YouTube", "Aug 2017", "A generative music video for artist Yasmin Gate.", "yasmin.jpg"),
-					make_project("Manifold Garden", "William Chyr • PC/PS4", "Apr 2017 \xa0→ Jun 2017", "A first-person exploration game full of infinite and impossible geometry.", "manifold.jpg"),
-					make_project("Playable Architecture", "Biome Collective • Steeple Church", "Nov 2016", "An interactive projection-mapped building.", "steeple.jpg"),
-					make_project("Killbox", "Biome Collective • PC/Steam", "Mar 2015 \xa0→ Nov 2016", "An exploration of drone warfare in the form of a video-game.", "killbox.jpg"),
-					make_project("Glitchspace", "Space Budgie • PC/Steam", "Aug 2013 \xa0→ Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
-				];
+	<script>
+		function make_project(name, subtitle, date, description, image) {
+			return { name: name, subtitle: subtitle, date: date, description: description, image: image, };
+		}
 
-				let html = "";
+		function load_page() {
+			let projects = [
+				make_project("Garden", "Biome Collective • Oculus Rift", "Jun 2017  \xa0→ Now", "A virtual-reality music game set in a neon organic world.", "garden.jpg"),
+				make_project("#SelfCare", "Tru Luv Media • iOS/Android", "Jun 2018 \xa0→ Aug 2018", "A free, simple, and beautiful relaxation companion.", "selfcare.jpg"),
+				make_project("Shpeel", "Biome Collective • Somerset House", "Sep 2018", "An interactive 360° projection at London Design Biennale 2018.", "shpeel.jpg"),
+				make_project("Black & White Bushido", "Good Catch • Nintendo Switch", "Jul 2018 \xa0→ Sep 2018", "A multiplayer stealth game ported to Nintendo Switch.", "bushido.jpg"),
+				// make_project("Neno and the Dragon", "Neno • PC", "Nov 2017 \xa0→ Now", "A co-operative exploration game set in a beautiful and reactive world.", "neno.jpg"),
+				make_project("Drawn to Light", "Jonnie Common • McManus Galleries", "Nov 2017", "A live audiovisual performance with music by Jonnie Common.", "drawn_to_light.jpg"),
+				make_project("Dark Arts of Shader Programming", "Arcadia Festival • Shadertoy", "Sep 2017", "An introduction to graphics programming workshop using Shadertoy.", "dark_arts.jpg"),
+				make_project("Radio", "Yasmin Gate • YouTube", "Aug 2017", "A generative music video for artist Yasmin Gate.", "yasmin.jpg"),
+				make_project("Manifold Garden", "William Chyr • PC/PS4", "Apr 2017 \xa0→ Jun 2017", "A first-person exploration game full of infinite and impossible geometry.", "manifold.jpg"),
+				make_project("Playable Architecture", "Biome Collective • Steeple Church", "Nov 2016", "An interactive projection-mapped building.", "steeple.jpg"),
+				make_project("Killbox", "Biome Collective • PC/Steam", "Mar 2015 \xa0→ Nov 2016", "An exploration of drone warfare in the form of a video-game.", "killbox.jpg"),
+				make_project("Glitchspace", "Space Budgie • PC/Steam", "Aug 2013 \xa0→ Dec 2014", "A first-person programming game.", "glitchspace.jpg"),
+			];
 
-				html += "<div>";
-				for(let i = 0; i < projects.length; i++) {
-					let project = projects[i];
+			let html = "";
 
-					// let subtitle = project.date;
-					let subtitle = project.subtitle;
+			html += "<div>";
+			for(let i = 0; i < projects.length; i++) {
+				let project = projects[i];
 
-					html += "<div style=\"text-align: center;\">";
+				// let subtitle = project.date;
+				let subtitle = project.subtitle;
 
-					html += "<div style=\"display: inline-block; padding-right: 10px;\">";
-					html += "<img style=\"margin-bottom: -5px;\" src=\"images/" + project.image + "\" width=\"480\" height=\"270\"></img>";
-					html += "</div>";
+				html += "<div style=\"text-align: center;\">";
 
-					let desc_height = 140;
-
-					html += "<div style=\"display: inline-block; vertical-align: top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
-					html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project.name + "</div>";
-					html += "<div style=\"font-size: 10px; font-style: italic;\">" + subtitle.toUpperCase() + "</div>";
-					html += "<div style=\"padding-bottom: 5px;\"></div>";
-					html += "<div style=\"font-size: 14px;\">" + project.description + "</div>";
-					html += "</div>";
-
-					html += "</div>";
-					// if(i < (projects.length - 1)) {
-						html += "<div style=\"padding-bottom: 20px;\"></div>";
-					// }
-				}
+				html += "<div style=\"display: inline-block; padding-right: 10px;\">";
+				html += "<img style=\"margin-bottom: -5px;\" src=\"images/" + project.image + "\" width=\"480\" height=\"270\"></img>";
 				html += "</div>";
 
-				init_page(PAGE_ID.PROJECTS, html);
+				let desc_height = 140;
+
+				html += "<div style=\"display: inline-block; vertical-align: top; width: 480px; height: " + desc_height + "px; text-align: left;\">";
+				html += "<div style=\"font-size: 20px; font-weight: bold;\">" + project.name + "</div>";
+				html += "<div style=\"font-size: 10px; font-style: italic;\">" + subtitle.toUpperCase() + "</div>";
+				html += "<div style=\"padding-bottom: 5px;\"></div>";
+				html += "<div style=\"font-size: 14px;\">" + project.description + "</div>";
+				html += "</div>";
+
+				html += "</div>";
+				// if(i < (projects.length - 1)) {
+					html += "<div style=\"padding-bottom: 20px;\"></div>";
+				// }
 			}
-		</script>
-	</head>
-	<body style="background-color: #000000;"></body>
+			html += "</div>";
+
+			init_page(PAGE_ID.PROJECTS, html);
+		}
+
+		load_page();
+	</script>
 </html>
